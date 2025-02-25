@@ -2,7 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:id="@+id/camera_button"
+=======
+    android:id="@+id/main"
+>>>>>>> abcc495 (Add NSGs work)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".okno_vhoda">
@@ -24,7 +28,11 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
+<<<<<<< HEAD
         android:hint="Name"
+=======
+        android:text="Name"
+>>>>>>> abcc495 (Add NSGs work)
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -38,13 +46,20 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|textPassword"
+<<<<<<< HEAD
         android:hint="vhod_password"
+=======
+        android:text="vhod_password"
+>>>>>>> abcc495 (Add NSGs work)
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> abcc495 (Add NSGs work)
     <Button
         android:id="@+id/vhod_button"
         android:layout_width="wrap_content"

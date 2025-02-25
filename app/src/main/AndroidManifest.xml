@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+=======
+>>>>>>> abcc495 (Add NSGs work)
 
     <application
         android:allowBackup="true"
@@ -15,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laba"
         tools:targetApi="31">
+<<<<<<< HEAD
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713"/>
@@ -26,6 +30,8 @@
         <activity
             android:name=".zaversheniye"
             android:exported="false" />
+=======
+>>>>>>> abcc495 (Add NSGs work)
         <activity
             android:name=".profil_menu"
             android:exported="false" />
@@ -33,6 +39,12 @@
             android:name=".glavniy_ekran"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
+=======
+            android:name=".vhod_ili_registr"
+            android:exported="false" />
+        <activity
+>>>>>>> abcc495 (Add NSGs work)
             android:name=".okno_reg"
             android:exported="false" />
         <activity
@@ -42,6 +54,12 @@
             android:name=".vhod_ili_reg"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
+=======
+            android:name=".proba"
+            android:exported="false" />
+        <activity
+>>>>>>> abcc495 (Add NSGs work)
             android:name=".vhod_ili_propusk"
             android:exported="false"
             android:label="@string/app_name"
@@ -52,7 +70,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
 
+=======
+>>>>>>> abcc495 (Add NSGs work)
     </application>
 
 </manifest>

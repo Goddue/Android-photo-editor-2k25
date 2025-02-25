@@ -2,7 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:id="@+id/camera_button"
+=======
+    android:id="@+id/main"
+>>>>>>> abcc495 (Add NSGs work)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".okno_reg">
@@ -33,7 +37,11 @@
         app:layout_constraintVertical_bias="0.379" />
 
     <EditText
+<<<<<<< HEAD
         android:id="@+id/parol_perviy"
+=======
+        android:id="@+id/registr_password"
+>>>>>>> abcc495 (Add NSGs work)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -45,7 +53,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+<<<<<<< HEAD
         android:id="@+id/parol_povtor"
+=======
+        android:id="@+id/registr_povt_password"
+>>>>>>> abcc495 (Add NSGs work)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
