@@ -2,6 +2,9 @@ package com.example.laba
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -17,6 +20,7 @@ class glavniy_ekran : AppCompatActivity() {
     lateinit var gallery_button: FloatingActionButton
 
 =======
+<<<<<<< HEAD
 =======
 import android.app.Activity
 >>>>>>> 66fe6b8 (Fix for last master commit)
@@ -36,6 +40,16 @@ class glavniy_ekran : AppCompatActivity() {
     lateinit var gallery_button: FloatingActionButton
 
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
+
+class glavniy_ekran : AppCompatActivity() {
+    lateinit var pereh_v_profil_button: Button
+>>>>>>> abcc495 (Add NSGs work)
+>>>>>>> 09b46dd (Add NSGs work)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,14 +58,20 @@ class glavniy_ekran : AppCompatActivity() {
         pereh_v_profil_button = findViewById(R.id.pereh_v_profil_button)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         cam_button = findViewById(R.id.cam_button)
         gallery_button = findViewById(R.id.gallery_button)
 =======
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
         cam_button = findViewById(R.id.cam_button)
         gallery_button = findViewById(R.id.gallery_button)
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
 
         pereh_v_profil_button.setOnClickListener {
             val intent = Intent(this, profil_menu::class.java)
@@ -60,6 +80,7 @@ class glavniy_ekran : AppCompatActivity() {
 <<<<<<< HEAD
         //tezt
 
+<<<<<<< HEAD
         gallery_button.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
@@ -87,6 +108,7 @@ class glavniy_ekran : AppCompatActivity() {
 
 }
 =======
+<<<<<<< HEAD
 
         gallery_button.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
@@ -119,3 +141,8 @@ class glavniy_ekran : AppCompatActivity() {
 
 }
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+    }
+}
+>>>>>>> abcc495 (Add NSGs work)
+>>>>>>> 09b46dd (Add NSGs work)

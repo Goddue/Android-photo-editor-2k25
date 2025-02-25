@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
     android:id="@+id/camera_button"
 =======
     android:id="@+id/main"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".okno_vhoda">
@@ -34,13 +40,19 @@
         android:inputType="text"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         android:hint="Name"
 =======
         android:text="Name"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
         android:hint="Name"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -56,13 +68,19 @@
         android:inputType="text|textPassword"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         android:hint="vhod_password"
 =======
         android:text="vhod_password"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
         android:hint="vhod_password"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,12 +88,18 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> abcc495 (Add NSGs work)
 =======
 
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+
+=======
+>>>>>>> abcc495 (Add NSGs work)
+>>>>>>> 09b46dd (Add NSGs work)
     <Button
         android:id="@+id/vhod_button"
         android:layout_width="wrap_content"

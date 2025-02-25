@@ -4,25 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
     android:id="@+id/camera_button"
 =======
     android:id="@+id/main"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".glavniy_ekran">
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> abcc495 (Add NSGs work)
 =======
 
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+
+=======
+>>>>>>> abcc495 (Add NSGs work)
+>>>>>>> 09b46dd (Add NSGs work)
     <Button
         android:id="@+id/pereh_v_profil_button"
         android:layout_width="wrap_content"
@@ -37,6 +49,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/gallery_button"
         android:layout_width="wrap_content"
@@ -110,5 +125,19 @@
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
 
+<<<<<<< HEAD
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+=======
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eto glavniy ekran"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> abcc495 (Add NSGs work)
+>>>>>>> 09b46dd (Add NSGs work)
 </androidx.constraintlayout.widget.ConstraintLayout>

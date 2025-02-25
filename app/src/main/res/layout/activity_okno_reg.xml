@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
     android:id="@+id/camera_button"
 =======
     android:id="@+id/main"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".okno_reg">
@@ -43,13 +49,19 @@
     <EditText
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         android:id="@+id/parol_perviy"
 =======
         android:id="@+id/registr_password"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
         android:id="@+id/registr_email"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -63,13 +75,19 @@
     <EditText
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         android:id="@+id/parol_povtor"
 =======
         android:id="@+id/registr_povt_password"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
         android:id="@+id/registr_password"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

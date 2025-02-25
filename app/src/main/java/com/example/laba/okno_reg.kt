@@ -3,12 +3,18 @@ package com.example.laba
 import android.content.Intent
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.content.SharedPreferences
 =======
 >>>>>>> abcc495 (Add NSGs work)
 =======
 import android.content.SharedPreferences
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+import android.content.SharedPreferences
+=======
+>>>>>>> abcc495 (Add NSGs work)
+>>>>>>> 09b46dd (Add NSGs work)
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
@@ -26,6 +32,7 @@ class okno_reg : AppCompatActivity() {
 
 class okno_reg : AppCompatActivity() {
     lateinit var registr_name: EditText
+<<<<<<< HEAD
     lateinit var registr_email: EditText
     lateinit var registr_password: EditText
     lateinit var registr_button: Button
@@ -34,6 +41,12 @@ class okno_reg : AppCompatActivity() {
 =======
     private lateinit var shared_preferences: SharedPreferences
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+    lateinit var registr_password: EditText
+    lateinit var registr_povt_password: EditText
+    lateinit var registr_button: Button
+>>>>>>> abcc495 (Add NSGs work)
+>>>>>>> 09b46dd (Add NSGs work)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +55,9 @@ class okno_reg : AppCompatActivity() {
         registr_name = findViewById(R.id.registr_name)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         parol_perviy = findViewById(R.id.parol_perviy)
         parol_povtor = findViewById(R.id.parol_povtor)
         registr_button = findViewById(R.id.registr_button)
@@ -67,6 +83,7 @@ class okno_reg : AppCompatActivity() {
                 Toast.makeText(this, "Пароли должны совпадать", Toast.LENGTH_SHORT).show()
             }
 =======
+<<<<<<< HEAD
 =======
         registr_email = findViewById(R.id.registr_email)
 >>>>>>> 66fe6b8 (Fix for last master commit)
@@ -84,6 +101,13 @@ class okno_reg : AppCompatActivity() {
             editor.putString("EXTRA_PASSWORD", password)
             editor.apply()
 
+=======
+        registr_password = findViewById(R.id.registr_password)
+        registr_povt_password = findViewById(R.id.registr_povt_password)
+        registr_button = findViewById(R.id.registr_button)
+
+        registr_button.setOnClickListener {
+>>>>>>> 09b46dd (Add NSGs work)
             val intent = Intent(this, glavniy_ekran::class.java)
             startActivity(intent)
 >>>>>>> abcc495 (Add NSGs work)

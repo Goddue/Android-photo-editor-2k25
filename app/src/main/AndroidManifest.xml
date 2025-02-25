@@ -3,16 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 =======
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
 
     <application
         android:allowBackup="true"
@@ -38,12 +44,15 @@
             android:exported="false" />
 =======
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
         <activity
             android:name=".ekran_redact"
             android:exported="false" />
         <activity
             android:name=".zaversheniye"
             android:exported="false" />
+=======
+>>>>>>> 09b46dd (Add NSGs work)
         <activity
             android:name=".profil_menu"
             android:exported="false" />
@@ -53,13 +62,19 @@
         <activity
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
 =======
             android:name=".vhod_ili_registr"
             android:exported="false" />
         <activity
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
             android:name=".okno_reg"
             android:exported="false" />
         <activity
@@ -71,13 +86,19 @@
         <activity
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09b46dd (Add NSGs work)
 =======
             android:name=".proba"
             android:exported="false" />
         <activity
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> 09b46dd (Add NSGs work)
             android:name=".vhod_ili_propusk"
             android:exported="false"
             android:label="@string/app_name"
@@ -90,12 +111,18 @@
         </activity>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> abcc495 (Add NSGs work)
 =======
 
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+
+=======
+>>>>>>> abcc495 (Add NSGs work)
+>>>>>>> 09b46dd (Add NSGs work)
     </application>
 
 </manifest>
