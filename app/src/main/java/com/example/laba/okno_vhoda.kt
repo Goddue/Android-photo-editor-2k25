@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
+<<<<<<< HEAD
 import android.content.SharedPreferences
 
 class okno_vhoda : AppCompatActivity() {
@@ -12,6 +13,13 @@ class okno_vhoda : AppCompatActivity() {
     private lateinit var vhod_password: EditText
     private lateinit var vhod_button: Button
     private lateinit var shared_preferences: SharedPreferences
+=======
+
+class okno_vhoda : AppCompatActivity() {
+    lateinit var vhod_name: EditText
+    lateinit var vhod_password: EditText
+    lateinit var vhod_button: Button
+>>>>>>> abcc495 (Add NSGs work)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +29,7 @@ class okno_vhoda : AppCompatActivity() {
         vhod_password = findViewById(R.id.vhod_password)
         vhod_button = findViewById(R.id.vhod_button)
 
+<<<<<<< HEAD
         shared_preferences = getSharedPreferences("dannie_profilya", MODE_PRIVATE)
 
         vhod_button.setOnClickListener {
@@ -37,3 +46,14 @@ class okno_vhoda : AppCompatActivity() {
         }
     }
 }
+=======
+        vhod_button.setOnClickListener {
+            val intent = Intent(this, glavniy_ekran::class.java)
+            startActivity(intent)
+        }
+
+
+        }
+    }
+
+>>>>>>> abcc495 (Add NSGs work)

@@ -1,5 +1,6 @@
 package com.example.laba
 
+<<<<<<< HEAD
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -14,20 +15,33 @@ class glavniy_ekran : AppCompatActivity() {
     lateinit var cam_button: FloatingActionButton
     lateinit var gallery_button: FloatingActionButton
 
+=======
+import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
+
+class glavniy_ekran : AppCompatActivity() {
+    lateinit var pereh_v_profil_button: Button
+>>>>>>> abcc495 (Add NSGs work)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_glavniy_ekran)
 
         pereh_v_profil_button = findViewById(R.id.pereh_v_profil_button)
+<<<<<<< HEAD
         cam_button = findViewById(R.id.cam_button)
         gallery_button = findViewById(R.id.gallery_button)
+=======
+>>>>>>> abcc495 (Add NSGs work)
 
         pereh_v_profil_button.setOnClickListener {
             val intent = Intent(this, profil_menu::class.java)
             startActivity(intent)
         }
 
+<<<<<<< HEAD
         gallery_button.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
@@ -54,3 +68,7 @@ class glavniy_ekran : AppCompatActivity() {
     }
 
 }
+=======
+    }
+}
+>>>>>>> abcc495 (Add NSGs work)
