@@ -6,10 +6,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
     android:id="@+id/camera_button"
 =======
     android:id="@+id/main"
@@ -20,12 +23,17 @@
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+<<<<<<< HEAD
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 =======
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+    android:id="@+id/camera_button"
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".okno_reg">
@@ -61,12 +69,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
 =======
 >>>>>>> f7d9eae (beta 1.0)
+=======
+>>>>>>> 7745933 (beta 1.0)
         android:id="@+id/parol_perviy"
 =======
         android:id="@+id/registr_password"
@@ -92,6 +103,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|textPassword"
+=======
+        android:id="@+id/registr_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text|textEmailAddress"
+>>>>>>> ceba9e1 (beta 1.0)
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,12 +122,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
 =======
 >>>>>>> f7d9eae (beta 1.0)
+=======
+>>>>>>> 7745933 (beta 1.0)
         android:id="@+id/parol_povtor"
 =======
         android:id="@+id/registr_povt_password"
@@ -130,7 +151,13 @@
 =======
         android:id="@+id/parol_povtor"
 >>>>>>> d76c070 (beta 1.0)
+<<<<<<< HEAD
 >>>>>>> f7d9eae (beta 1.0)
+=======
+=======
+        android:id="@+id/registr_password"
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

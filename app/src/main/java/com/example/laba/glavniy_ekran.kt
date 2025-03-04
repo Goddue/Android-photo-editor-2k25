@@ -4,18 +4,26 @@ package com.example.laba
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+<<<<<<< HEAD
 import com.google.android.gms.ads.MobileAds
 <<<<<<< HEAD
+=======
+>>>>>>> ceba9e1 (beta 1.0)
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class glavniy_ekran : AppCompatActivity() {
@@ -23,6 +31,7 @@ class glavniy_ekran : AppCompatActivity() {
     lateinit var cam_button: FloatingActionButton
     lateinit var gallery_button: FloatingActionButton
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +57,7 @@ class glavniy_ekran : AppCompatActivity() {
 
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+<<<<<<< HEAD
 =======
 =======
 import android.app.Activity
@@ -73,6 +83,9 @@ class glavniy_ekran : AppCompatActivity() {
 
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,10 +96,13 @@ class glavniy_ekran : AppCompatActivity() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
         cam_button = findViewById(R.id.cam_button)
         gallery_button = findViewById(R.id.gallery_button)
 =======
@@ -100,10 +116,17 @@ class glavniy_ekran : AppCompatActivity() {
         gallery_button = findViewById(R.id.gallery_button)
 >>>>>>> 66fe6b8 (Fix for last master commit)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+        cam_button = findViewById(R.id.cam_button)
+        gallery_button = findViewById(R.id.gallery_button)
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 
         pereh_v_profil_button.setOnClickListener {
             val intent = Intent(this, profil_menu::class.java)
@@ -114,8 +137,11 @@ class glavniy_ekran : AppCompatActivity() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> ceba9e1 (beta 1.0)
         gallery_button.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
@@ -123,7 +149,11 @@ class glavniy_ekran : AppCompatActivity() {
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         MobileAds.initialize(this) {}
+=======
+
+>>>>>>> ceba9e1 (beta 1.0)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -143,6 +173,7 @@ class glavniy_ekran : AppCompatActivity() {
         private const val REQUEST_CODE_GALLERY = 100
     }
 
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -211,4 +242,10 @@ class glavniy_ekran : AppCompatActivity() {
 
 }
 >>>>>>> 66fe6b8 (Fix for last master commit)
+<<<<<<< HEAD
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+}
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)

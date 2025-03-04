@@ -6,10 +6,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
     android:id="@+id/camera_button"
 =======
     android:id="@+id/main"
@@ -20,12 +23,17 @@
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+<<<<<<< HEAD
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 =======
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+    android:id="@+id/camera_button"
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".profil_menu">
@@ -43,6 +51,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
@@ -51,6 +60,12 @@
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
         app:layout_constraintVertical_bias="0.575" />
 
     <TextView
@@ -78,13 +93,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
 =======
         app:layout_constraintVertical_bias="0.499" />
 >>>>>>> abcc495 (Add NSGs work)
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -93,4 +112,8 @@
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 </androidx.constraintlayout.widget.ConstraintLayout>

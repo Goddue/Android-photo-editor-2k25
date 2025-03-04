@@ -45,13 +45,17 @@ dependencies {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
 =======
 
 >>>>>>> abcc495 (Add NSGs work)
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -60,6 +64,10 @@ dependencies {
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -76,6 +84,7 @@ dependencies {
     implementation(libs.androidx.activity)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     implementation ("androidx.lifecycle:lifecycle-common:2.6.1")
     implementation ("com.google.android.gms:play-services-ads:22.6.0")
 =======
@@ -84,6 +93,8 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-common:2.6.1")
     implementation ("com.google.android.gms:play-services-ads:22.6.0")
 >>>>>>> d76c070 (beta 1.0)
+=======
+>>>>>>> ceba9e1 (beta 1.0)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

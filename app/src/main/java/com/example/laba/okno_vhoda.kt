@@ -9,10 +9,15 @@ import android.widget.EditText
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 import android.content.SharedPreferences
 
 class okno_vhoda : AppCompatActivity() {
@@ -20,6 +25,7 @@ class okno_vhoda : AppCompatActivity() {
     private lateinit var vhod_password: EditText
     private lateinit var vhod_button: Button
     private lateinit var shared_preferences: SharedPreferences
+<<<<<<< HEAD
 =======
 
 class okno_vhoda : AppCompatActivity() {
@@ -41,10 +47,15 @@ class okno_vhoda : AppCompatActivity() {
     private lateinit var shared_preferences: SharedPreferences
 >>>>>>> 66fe6b8 (Fix for last master commit)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,10 +69,15 @@ class okno_vhoda : AppCompatActivity() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
         shared_preferences = getSharedPreferences("dannie_profilya", MODE_PRIVATE)
 
         vhod_button.setOnClickListener {
@@ -78,6 +94,7 @@ class okno_vhoda : AppCompatActivity() {
         }
     }
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +125,7 @@ class okno_vhoda : AppCompatActivity() {
 }
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> b4b977d (Fix for last master commit)
         vhod_button.setOnClickListener {
@@ -133,3 +151,6 @@ class okno_vhoda : AppCompatActivity() {
 }
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)

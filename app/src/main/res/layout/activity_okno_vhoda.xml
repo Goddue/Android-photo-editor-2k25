@@ -6,10 +6,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
     android:id="@+id/camera_button"
 =======
     android:id="@+id/main"
@@ -20,12 +23,17 @@
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+<<<<<<< HEAD
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 =======
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+    android:id="@+id/camera_button"
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".okno_vhoda">
@@ -51,10 +59,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
         android:hint="Name"
 =======
         android:text="Name"
@@ -65,12 +76,17 @@
         android:hint="Name"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+<<<<<<< HEAD
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 =======
         android:hint="Name"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+        android:hint="Name"
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -88,10 +104,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
         android:hint="vhod_password"
 =======
         android:text="vhod_password"
@@ -102,12 +121,17 @@
         android:hint="vhod_password"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+<<<<<<< HEAD
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 =======
         android:hint="vhod_password"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+        android:hint="vhod_password"
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,14 +141,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
 
 =======
 >>>>>>> abcc495 (Add NSGs work)
 =======
 
 >>>>>>> 66fe6b8 (Fix for last master commit)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -133,6 +161,11 @@
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
     <Button
         android:id="@+id/vhod_button"
         android:layout_width="wrap_content"

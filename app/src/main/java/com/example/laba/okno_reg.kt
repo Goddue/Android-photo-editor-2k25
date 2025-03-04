@@ -5,14 +5,18 @@ import android.content.Intent
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
 import android.content.SharedPreferences
 =======
 >>>>>>> abcc495 (Add NSGs work)
 =======
 import android.content.SharedPreferences
 >>>>>>> 66fe6b8 (Fix for last master commit)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import android.content.SharedPreferences
@@ -21,10 +25,16 @@ import android.content.SharedPreferences
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+import android.content.SharedPreferences
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import android.widget.Toast
@@ -58,6 +68,7 @@ class okno_reg : AppCompatActivity() {
     private lateinit var shared_preferences: SharedPreferences
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+<<<<<<< HEAD
 =======
     lateinit var registr_email: EditText
 >>>>>>> b4b977d (Fix for last master commit)
@@ -72,6 +83,16 @@ class okno_reg : AppCompatActivity() {
     private lateinit var shared_preferences: SharedPreferences
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+
+class okno_reg : AppCompatActivity() {
+    lateinit var registr_name: EditText
+    lateinit var registr_email: EditText
+    lateinit var registr_password: EditText
+    lateinit var registr_button: Button
+    private lateinit var shared_preferences: SharedPreferences
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,12 +104,15 @@ class okno_reg : AppCompatActivity() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
 =======
 >>>>>>> f7d9eae (beta 1.0)
+=======
+>>>>>>> 7745933 (beta 1.0)
         parol_perviy = findViewById(R.id.parol_perviy)
         parol_povtor = findViewById(R.id.parol_povtor)
         registr_button = findViewById(R.id.registr_button)
@@ -124,12 +148,17 @@ class okno_reg : AppCompatActivity() {
         parol_perviy = findViewById(R.id.parol_perviy)
         parol_povtor = findViewById(R.id.parol_povtor)
 >>>>>>> d76c070 (beta 1.0)
+=======
+        registr_email = findViewById(R.id.registr_email)
+        registr_password = findViewById(R.id.registr_password)
+>>>>>>> ceba9e1 (beta 1.0)
         registr_button = findViewById(R.id.registr_button)
         shared_preferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
 
         registr_button.setOnClickListener {
 
             val name = registr_name.text.toString().trim()
+<<<<<<< HEAD
             val password_perviy = parol_perviy.text.toString().trim()
             val password = parol_povtor.text.toString().trim()
 
@@ -179,6 +208,17 @@ class okno_reg : AppCompatActivity() {
                 Toast.makeText(this, "Пароли должны совпадать", Toast.LENGTH_SHORT).show()
             }
 >>>>>>> d76c070 (beta 1.0)
+=======
+            val password = registr_password.text.toString().trim()
+
+            val editor = shared_preferences.edit()
+            editor.putString("EXTRA_NAME", name)
+            editor.putString("EXTRA_PASSWORD", password)
+            editor.apply()
+
+            val intent = Intent(this, glavniy_ekran::class.java)
+            startActivity(intent)
+>>>>>>> ceba9e1 (beta 1.0)
         }
 
 

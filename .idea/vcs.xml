@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
 =======
     <mapping directory="" vcs="Git" />
@@ -11,6 +12,8 @@
 =======
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
     <mapping directory="" vcs="Git" />
 =======
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
@@ -24,6 +27,12 @@
     <mapping directory="" vcs="Git" />
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> 9c5c2f0 (Fix for last master commit)
+<<<<<<< HEAD
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
   </component>
 </project>

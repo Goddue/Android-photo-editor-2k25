@@ -8,10 +8,15 @@ import android.widget.Button
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 import android.widget.TextView
 import android.content.SharedPreferences
 
@@ -20,6 +25,7 @@ class profil_menu : AppCompatActivity() {
     private lateinit var prosmotr_logina: TextView
     private lateinit var prosmotr_parolya: TextView
     private lateinit var shared_preferences: SharedPreferences
+<<<<<<< HEAD
 =======
 
 class profil_menu : AppCompatActivity() {
@@ -40,10 +46,15 @@ class profil_menu : AppCompatActivity() {
     private lateinit var shared_preferences: SharedPreferences
 >>>>>>> 66fe6b8 (Fix for last master commit)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +65,7 @@ class profil_menu : AppCompatActivity() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
@@ -62,6 +74,12 @@ class profil_menu : AppCompatActivity() {
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
         prosmotr_logina = findViewById(R.id.prosmotr_logina)
         prosmotr_parolya = findViewById(R.id.prosmotr_parolya)
 
@@ -74,12 +92,16 @@ class profil_menu : AppCompatActivity() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
 =======
 >>>>>>> abcc495 (Add NSGs work)
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -87,6 +109,10 @@ class profil_menu : AppCompatActivity() {
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
 
         domoy_test_button.setOnClickListener {
             val intent = Intent(this, vhod_ili_propusk::class.java)
@@ -96,13 +122,17 @@ class profil_menu : AppCompatActivity() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+>>>>>>> 7745933 (beta 1.0)
 =======
 
 >>>>>>> abcc495 (Add NSGs work)
 =======
 >>>>>>> 66fe6b8 (Fix for last master commit)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -111,5 +141,9 @@ class profil_menu : AppCompatActivity() {
 >>>>>>> 09b46dd (Add NSGs work)
 =======
 >>>>>>> b4b977d (Fix for last master commit)
+=======
+=======
+>>>>>>> ceba9e1 (beta 1.0)
+>>>>>>> 7745933 (beta 1.0)
     }
 }

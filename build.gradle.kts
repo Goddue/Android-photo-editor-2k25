@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d76c070 (beta 1.0)
 }
@@ -20,4 +21,6 @@ allprojects {
 >>>>>>> abcc495 (Add NSGs work)
 =======
 >>>>>>> d76c070 (beta 1.0)
+=======
+>>>>>>> ceba9e1 (beta 1.0)
 }
