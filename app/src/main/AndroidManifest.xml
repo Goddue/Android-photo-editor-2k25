@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laba"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544/1033173712"/>
+
+
         <activity
             android:name=".ekran_redact"
             android:exported="false" />

@@ -33,11 +33,11 @@
         app:layout_constraintVertical_bias="0.379" />
 
     <EditText
-        android:id="@+id/registr_email"
+        android:id="@+id/parol_perviy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text|textEmailAddress"
+        android:inputType="text|textPassword"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/registr_password"
+        android:id="@+id/parol_povtor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
