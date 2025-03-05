@@ -2,11 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 =======
 >>>>>>> abcc495 (Add NSGs work)
+=======
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+>>>>>>> 66fe6b8 (Fix for last master commit)
 
     <application
         android:allowBackup="true"
@@ -33,6 +39,12 @@
 =======
 >>>>>>> abcc495 (Add NSGs work)
         <activity
+            android:name=".ekran_redact"
+            android:exported="false" />
+        <activity
+            android:name=".zaversheniye"
+            android:exported="false" />
+        <activity
             android:name=".profil_menu"
             android:exported="false" />
         <activity
@@ -40,11 +52,14 @@
             android:exported="false" />
         <activity
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             android:name=".vhod_ili_registr"
             android:exported="false" />
         <activity
 >>>>>>> abcc495 (Add NSGs work)
+=======
+>>>>>>> 66fe6b8 (Fix for last master commit)
             android:name=".okno_reg"
             android:exported="false" />
         <activity
@@ -55,11 +70,14 @@
             android:exported="false" />
         <activity
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             android:name=".proba"
             android:exported="false" />
         <activity
 >>>>>>> abcc495 (Add NSGs work)
+=======
+>>>>>>> 66fe6b8 (Fix for last master commit)
             android:name=".vhod_ili_propusk"
             android:exported="false"
             android:label="@string/app_name"
@@ -71,9 +89,13 @@
             </intent-filter>
         </activity>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> abcc495 (Add NSGs work)
+=======
+
+>>>>>>> 66fe6b8 (Fix for last master commit)
     </application>
 
 </manifest>

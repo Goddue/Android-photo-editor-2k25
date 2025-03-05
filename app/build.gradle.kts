@@ -42,9 +42,12 @@ android {
 
 dependencies {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> abcc495 (Add NSGs work)
+=======
+>>>>>>> 66fe6b8 (Fix for last master commit)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
