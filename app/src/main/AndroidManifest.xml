@@ -40,11 +40,15 @@
         android:theme="@style/Theme.Laba"
         tools:targetApi="31">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d76c070 (beta 1.0)
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713"/>
 
 
+<<<<<<< HEAD
         <activity
             android:name=".ekran_redact"
             android:exported="false" />
@@ -54,6 +58,7 @@
 =======
 >>>>>>> abcc495 (Add NSGs work)
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity
             android:name=".ekran_redact"
             android:exported="false" />
@@ -62,6 +67,10 @@
             android:exported="false" />
 =======
 >>>>>>> 09b46dd (Add NSGs work)
+=======
+=======
+>>>>>>> d76c070 (beta 1.0)
+>>>>>>> f7d9eae (beta 1.0)
         <activity
             android:name=".ekran_redact"
             android:exported="false" />

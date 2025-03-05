@@ -15,6 +15,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import com.google.android.gms.ads.MobileAds
+<<<<<<< HEAD
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class glavniy_ekran : AppCompatActivity() {
@@ -33,6 +34,8 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+=======
+>>>>>>> d76c070 (beta 1.0)
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class glavniy_ekran : AppCompatActivity() {
@@ -119,6 +122,7 @@ class glavniy_ekran : AppCompatActivity() {
             startActivityForResult(intent, REQUEST_CODE_GALLERY)
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         MobileAds.initialize(this) {}
     }
 
@@ -183,6 +187,9 @@ class glavniy_ekran : AppCompatActivity() {
 =======
 =======
 
+=======
+        MobileAds.initialize(this) {}
+>>>>>>> d76c070 (beta 1.0)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

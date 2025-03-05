@@ -75,10 +75,15 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
 <<<<<<< HEAD
+<<<<<<< HEAD
     implementation ("androidx.lifecycle:lifecycle-common:2.6.1")
     implementation ("com.google.android.gms:play-services-ads:22.6.0")
 =======
 >>>>>>> abcc495 (Add NSGs work)
+=======
+    implementation ("androidx.lifecycle:lifecycle-common:2.6.1")
+    implementation ("com.google.android.gms:play-services-ads:22.6.0")
+>>>>>>> d76c070 (beta 1.0)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
