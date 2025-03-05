@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -13,13 +16,16 @@
         android:theme="@style/Theme.Laba"
         tools:targetApi="31">
         <activity
+            android:name=".ekran_redact"
+            android:exported="false" />
+        <activity
+            android:name=".zaversheniye"
+            android:exported="false" />
+        <activity
             android:name=".profil_menu"
             android:exported="false" />
         <activity
             android:name=".glavniy_ekran"
-            android:exported="false" />
-        <activity
-            android:name=".vhod_ili_registr"
             android:exported="false" />
         <activity
             android:name=".okno_reg"
@@ -29,9 +35,6 @@
             android:exported="false" />
         <activity
             android:name=".vhod_ili_reg"
-            android:exported="false" />
-        <activity
-            android:name=".proba"
             android:exported="false" />
         <activity
             android:name=".vhod_ili_propusk"
@@ -44,6 +47,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

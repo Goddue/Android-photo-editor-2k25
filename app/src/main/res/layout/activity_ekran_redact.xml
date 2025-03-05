@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD">
+
+    <Button
+        android:id="@+id/btn_nazad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Главная"
+        android:layout_alignParentStart="true"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"/>
+
+
+    <ImageView
+        android:id="@+id/izobrazheniye"
+        android:layout_width="364dp"
+        android:layout_height="506dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="131dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/white"
+        android:contentDescription="Изображение для редактирования"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/slider_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scroll_buttons"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:padding="8dp">
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <Button android:id="@+id/btn_function1" style="@style/FilterButton" />
+            <Button android:id="@+id/btn_function2" style="@style/FilterButton" />
+            <Button android:id="@+id/btn_function3" style="@style/FilterButton" />
+            <Button android:id="@+id/btn_function4" style="@style/FilterButton" />
+            <Button android:id="@+id/btn_function5" style="@style/FilterButton" />
+            <Button android:id="@+id/btn_function6" style="@style/FilterButton" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
