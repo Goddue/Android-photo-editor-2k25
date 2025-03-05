@@ -3,15 +3,27 @@
   <component name="VcsDirectoryMappings">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
 =======
     <mapping directory="" vcs="Git" />
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
+=======
+>>>>>>> b4b977d (Fix for last master commit)
     <mapping directory="" vcs="Git" />
 =======
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
 >>>>>>> ceba9e1 (beta 1.0)
+<<<<<<< HEAD
 >>>>>>> 960ede1 (beta 1.0)
+=======
+=======
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+=======
+    <mapping directory="" vcs="Git" />
+>>>>>>> 66fe6b8 (Fix for last master commit)
+>>>>>>> 9c5c2f0 (Fix for last master commit)
+>>>>>>> b4b977d (Fix for last master commit)
   </component>
 </project>

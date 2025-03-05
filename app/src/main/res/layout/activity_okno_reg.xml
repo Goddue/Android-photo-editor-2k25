@@ -5,18 +5,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
+=======
+>>>>>>> b4b977d (Fix for last master commit)
     android:id="@+id/camera_button"
 =======
     android:id="@+id/main"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     android:id="@+id/camera_button"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
 >>>>>>> 09b46dd (Add NSGs work)
+=======
+=======
+    android:id="@+id/camera_button"
+>>>>>>> 66fe6b8 (Fix for last master commit)
+>>>>>>> b4b977d (Fix for last master commit)
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".okno_reg">
@@ -50,18 +59,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
+=======
+>>>>>>> b4b977d (Fix for last master commit)
         android:id="@+id/parol_perviy"
 =======
         android:id="@+id/registr_password"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         android:id="@+id/registr_email"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
 >>>>>>> 09b46dd (Add NSGs work)
+=======
+=======
+        android:id="@+id/registr_email"
+>>>>>>> 66fe6b8 (Fix for last master commit)
+>>>>>>> b4b977d (Fix for last master commit)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -76,18 +94,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 09b46dd (Add NSGs work)
+=======
+>>>>>>> b4b977d (Fix for last master commit)
         android:id="@+id/parol_povtor"
 =======
         android:id="@+id/registr_povt_password"
 >>>>>>> abcc495 (Add NSGs work)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         android:id="@+id/registr_password"
 >>>>>>> 66fe6b8 (Fix for last master commit)
 =======
 >>>>>>> 09b46dd (Add NSGs work)
+=======
+=======
+        android:id="@+id/registr_password"
+>>>>>>> 66fe6b8 (Fix for last master commit)
+>>>>>>> b4b977d (Fix for last master commit)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
