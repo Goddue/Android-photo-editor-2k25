@@ -43,6 +43,7 @@
     <EditText
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:id="@+id/parol_perviy"
 =======
         android:id="@+id/registr_password"
@@ -50,10 +51,13 @@
 =======
         android:id="@+id/registr_email"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+        android:id="@+id/parol_perviy"
+>>>>>>> d76c070 (beta 1.0)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text|textEmailAddress"
+        android:inputType="text|textPassword"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +67,7 @@
     <EditText
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:id="@+id/parol_povtor"
 =======
         android:id="@+id/registr_povt_password"
@@ -70,6 +75,9 @@
 =======
         android:id="@+id/registr_password"
 >>>>>>> 66fe6b8 (Fix for last master commit)
+=======
+        android:id="@+id/parol_povtor"
+>>>>>>> d76c070 (beta 1.0)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

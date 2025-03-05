@@ -4,6 +4,9 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d76c070 (beta 1.0)
 }
 
 allprojects {
@@ -12,6 +15,9 @@ allprojects {
             force ("androidx.lifecycle:lifecycle-common:2.6.1")
         }
     }
+<<<<<<< HEAD
 =======
 >>>>>>> abcc495 (Add NSGs work)
+=======
+>>>>>>> d76c070 (beta 1.0)
 }
