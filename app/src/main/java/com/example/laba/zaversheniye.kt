@@ -1,6 +1,5 @@
 package com.example.laba
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -14,8 +13,6 @@ class zaversheniye : AppCompatActivity() {
     private lateinit var rating_container: LinearLayout
     private lateinit var btn_predlozh_otsenku: Button
     private lateinit var btn_otpravka: Button
-    private lateinit var perehod_osnovn_ekran: Button
-    private lateinit var podpiska_button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +21,7 @@ class zaversheniye : AppCompatActivity() {
 
         rating_container = findViewById(R.id.rating_container)
         btn_predlozh_otsenku = findViewById(R.id.predlozh_otsenku_button)
-        btn_otpravka = findViewById(R.id.btn_otpravka)
-        podpiska_button = findViewById(R.id.podpiska_button)
+        btn_otpravka = findViewById(R.id.otpravit_otsenku_button)
 
         rating_container.visibility = View.GONE
         btn_predlozh_otsenku.setOnClickListener {
@@ -35,11 +31,5 @@ class zaversheniye : AppCompatActivity() {
         btn_otpravka.setOnClickListener {
             Toast.makeText(this, "Ты лучший!", Toast.LENGTH_SHORT).show()
         }
-
-        perehod_osnovn_ekran.setOnClickListener {
-            val intent = Intent(this, glavniy_ekran::class.java)
-            startActivity(intent)
-        }
-
     }
 }

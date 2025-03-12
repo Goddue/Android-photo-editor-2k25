@@ -1,41 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fon3"
+    android:padding="16dp">
+
+    <View
+        android:layout_width="318dp"
+        android:layout_height="337dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rounded_corner" />
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:contentDescription="Логотип"
+        android:src="@drawable/log" />
 
     <TextView
         android:id="@+id/avtoriz_predl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="avtoriz"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="190dp"
+        android:fontFamily="sans-serif"
+        android:text="Авторизация"
+        android:textSize="24sp"
+        android:textStyle="normal" />
 
     <Button
         android:id="@+id/vhod_vibor_ekr"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="vhod"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
+        android:layout_height="60dp"
+        android:layout_below="@id/avtoriz_predl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#32312D"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minWidth="300dp"
+        android:text="Вход"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/propusk_vibor_ekr"
         android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/vhod_vibor_ekr"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#32312D"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minWidth="300dp"
+        android:text="Пропустить"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/social_buttons_container"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="propusk"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_below="@+id/propusk_vibor_ekr"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_google"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_bg"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/google" />
+
+        <ImageButton
+            android:id="@+id/btn_yandex"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_bg"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/yandex" />
+
+        <ImageButton
+            android:id="@+id/btn_telegram"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_bg"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/telegram" />
+
+        <ImageButton
+            android:id="@+id/btn_mailru"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_bg"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/gmail" />
+
+        <ImageButton
+            android:id="@+id/btn_vk"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_bg"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/vk" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -5,56 +5,95 @@
     android:id="@+id/camera_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDF5EB"
     tools:context=".glavniy_ekran">
 
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/profil"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="15dp"
+        tools:ignore="MissingConstraints">
 
-    <Button
-        android:id="@+id/pereh_v_profil_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="perehod v profil"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.939"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/people" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/gallery_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648"
-        app:srcCompat="@android:drawable/ic_menu_gallery" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/cam_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView2"
-        android:layout_width="404dp"
-        android:layout_height="197dp"
-        android:layout_marginTop="84dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/pereh_v_profil_button"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@android:color/transparent"
+            android:text="" />
+    </RelativeLayout>
 
 
+    <RelativeLayout
+        android:layout_width="92dp"
+        android:layout_height="94dp"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="258dp">
+
+        <ImageView
+            android:id="@+id/icon_button"
+            android:layout_width="72dp"
+            android:layout_height="82dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gallery" />
+
+        <Button
+            android:id="@+id/gallery_button"
+            android:layout_width="281dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:text="" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="82dp"
+        android:layout_height="96dp"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="268dp"
+        tools:layout_editor_absoluteY="256dp">
+
+        <ImageView
+            android:id="@+id/icon_camera"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/camera" />
+
+        <Button
+            android:id="@+id/cam_button"
+            android:layout_width="281dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:text="" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="512dp"
+        android:layout_height="160dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-51dp"
+        tools:layout_editor_absoluteY="575dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="426dp"
+            android:layout_height="326dp"
+            android:layout_gravity="center"
+            android:src="@drawable/reclama" />
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

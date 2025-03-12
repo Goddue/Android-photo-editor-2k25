@@ -14,4 +14,22 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">Фильтр</item>
     </style>
+
+    <style name="RoundButton">
+        <item name="android:background">@drawable/oval_button1</item>
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+    </style>
+
+    <style name="ProfilButton">
+        <item name="android:background">@drawable/profil</item>
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+    </style>
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
 </resources>

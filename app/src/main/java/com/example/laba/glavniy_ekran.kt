@@ -6,7 +6,6 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
-import com.google.android.gms.ads.MobileAds
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class glavniy_ekran : AppCompatActivity() {
@@ -33,7 +32,7 @@ class glavniy_ekran : AppCompatActivity() {
             intent.type = "image/*"
             startActivityForResult(intent, REQUEST_CODE_GALLERY)
         }
-        MobileAds.initialize(this) {}
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
