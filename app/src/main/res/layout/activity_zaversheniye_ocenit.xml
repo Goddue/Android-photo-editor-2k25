@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camera_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    tools:context=".zaversheniye">
+
+    <TextView
+        android:id="@+id/zaversh_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Великолепно!😊"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <Button
+        android:id="@+id/predlozh_otsenku_button"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:backgroundTint="#32312D"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minWidth="200dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="Оценить"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zaversh_label"
+        android:layout_marginTop="140dp"/>
+
+    <Button
+        android:id="@+id/v_nachalo"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:backgroundTint="#32312D"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minWidth="200dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="На главную"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predlozh_otsenku_button"
+        android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="340dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
+        app:srcCompat="@drawable/pro" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/subscribe"
+        android:layout_width="340dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/brown_gradient"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minWidth="200dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="Подписаться"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

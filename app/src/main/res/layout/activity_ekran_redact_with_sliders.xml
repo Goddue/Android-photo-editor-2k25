@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon">
+
+    <Button
+        android:id="@+id/btn_nazad"
+        android:layout_width="130dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#32312D"
+        android:elevation="80dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Главная"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="130dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#32312D"
+        android:fontFamily="sans-serif"
+        android:text="Сохранить"
+        android:textSize="16sp" />
+
+
+    <ImageView
+        android:id="@+id/izobrazheniye"
+        android:layout_width="364dp"
+        android:layout_height="506dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="143dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/white"
+        android:contentDescription="Изображение для редактирования"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/slider_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#80F2E3D9"
+        android:layout_above="@id/scroll_buttons"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/slider_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Насыщенность"
+            android:fontFamily="sans-serif"
+            android:paddingStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textColor="#32312D"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#80F2E3D9"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_function1"
+                style="@style/RoundButton"
+                android:background="@drawable/oval_button1"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Natural"
+                android:layout_marginTop="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_function2"
+                style="@style/RoundButton"
+                android:background="@drawable/oval_button2"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Pink"
+                android:layout_marginTop="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_function3"
+                android:background="@drawable/oval_button3"
+                style="@style/RoundButton"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Vintage"
+                android:layout_marginTop="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_function4"
+                style="@style/RoundButton"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/gradient_button1"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:text="Замена лиц" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_function5"
+                style="@style/RoundButton"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/gradient_button2"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:text="Стиль Cartoon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_function6"
+                style="@style/RoundButton"
+                android:background="@drawable/gradient_button3"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:text="Стиль Fantasty"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

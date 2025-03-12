@@ -1,0 +1,129 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camera_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".zaversheniye">
+
+    <TextView
+        android:id="@+id/zaversh_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif"
+        android:text="Великолепно!😊"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/predlozh_otsenku_button"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="#32312D"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minWidth="200dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="Оценить"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zaversh_label" />
+
+    <Button
+        android:id="@+id/v_nachalo"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#32312D"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minWidth="200dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="На главную"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predlozh_otsenku_button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reklama_button"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/brown_gradient"
+        android:fontFamily="sans-serif-smallcaps"
+        android:minWidth="200dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="Оформить PRO"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_nachalo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:background="@drawable/rounded_corners_top"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+            android:id="@+id/rating_stars_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/star1" />
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/star1" />
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/star1" />
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/star" />
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/star" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
