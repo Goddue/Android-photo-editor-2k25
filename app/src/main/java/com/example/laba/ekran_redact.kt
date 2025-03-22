@@ -89,7 +89,7 @@ class ekran_redact : AppCompatActivity() {
 
     private fun neuronActivation(iv: ImageView) {
         // API ключ (замените на ваш реальный ключ)
-        val apiKey = "sk-LiU5q1cZgI6NusPZwGvBGMUsYfJjlcetco2kJ1cZiz6uwuGX"
+        val apiKey = ""
         val prompt = "Make the image look like a cartoon"
 
         // Создаем тело запроса
