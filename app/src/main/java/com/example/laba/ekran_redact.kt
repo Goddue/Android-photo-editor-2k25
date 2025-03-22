@@ -44,8 +44,8 @@ class ekran_redact : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setTitle("Сохранение изображения")
                 .setMessage("Выберите качество сохранения:")
-                .setPositiveButton("Хорошее качество") { _, _ -> saveToaster("high", izobrazheniye) }
-                .setNegativeButton("Плохое качество") { _, _ -> saveToaster("low", izobrazheniye) }
+                .setPositiveButton("Хорошее качество") { _, _ -> saveToaster(85, izobrazheniye) }
+                .setNegativeButton("Плохое качество") { _, _ -> saveToaster(0, izobrazheniye) }
                 .show()
         }
 
@@ -77,15 +77,14 @@ class ekran_redact : AppCompatActivity() {
     }
 
 
-    private fun saveToaster(quality: String, image: ImageView) {
+    private fun saveToaster(quality: Int, image: ImageView) {
         val folderToSave: String = cacheDir.toString()
-        Toast.makeText(this, "Изображение сохраняется в ($folderToSave)", Toast.LENGTH_SHORT).show()
-        saveToFolder(image, folderToSave)
+        saveToFolder(quality, image, folderToSave)
         Toast.makeText(this, "Изображение сохранено ($quality)", Toast.LENGTH_SHORT).show()
         startActivity(Intent(this, zaversheniye::class.java))
     }
 
-    private fun saveToFolder(iv: ImageView, folderToSave: String): String? {
+    private fun saveToFolder(quality: Int, iv: ImageView, folderToSave: String): String? {
         var fOut: OutputStream? = null
         val time: Time = Time()
         time.setToNow()
@@ -99,7 +98,7 @@ class ekran_redact : AppCompatActivity() {
             val bitmap: Bitmap = iv.drawable.toBitmap()
             bitmap.compress(
                 Bitmap.CompressFormat.JPEG,
-                300,
+                quality,
                 fOut
             ) // сохранять картинку в jpeg-формате с 85% сжатия.
             fOut.flush()
