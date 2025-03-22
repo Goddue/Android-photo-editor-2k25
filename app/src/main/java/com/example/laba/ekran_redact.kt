@@ -1,12 +1,20 @@
 package com.example.laba
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
+import android.text.format.Time
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.drawable.toBitmap
+import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStream
+
 
 class ekran_redact : AppCompatActivity() {
     private lateinit var izobrazheniye: ImageView
@@ -36,8 +44,8 @@ class ekran_redact : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setTitle("Сохранение изображения")
                 .setMessage("Выберите качество сохранения:")
-                .setPositiveButton("Хорошее качество") { _, _ -> saveImage("high") }
-                .setNegativeButton("Плохое качество") { _, _ -> saveImage("low") }
+                .setPositiveButton("Хорошее качество") { _, _ -> saveToaster("high", izobrazheniye) }
+                .setNegativeButton("Плохое качество") { _, _ -> saveToaster("low", izobrazheniye) }
                 .show()
         }
 
@@ -69,9 +77,44 @@ class ekran_redact : AppCompatActivity() {
     }
 
 
-    private fun saveImage(quality: String) {
+    private fun saveToaster(quality: String, image: ImageView) {
+        val folderToSave: String = cacheDir.toString()
+        Toast.makeText(this, "Изображение сохраняется в ($folderToSave)", Toast.LENGTH_SHORT).show()
+        saveToFolder(image, folderToSave)
         Toast.makeText(this, "Изображение сохранено ($quality)", Toast.LENGTH_SHORT).show()
         startActivity(Intent(this, zaversheniye::class.java))
+    }
+
+    private fun saveToFolder(iv: ImageView, folderToSave: String): String? {
+        var fOut: OutputStream? = null
+        val time: Time = Time()
+        time.setToNow()
+
+        try {
+            val file = File(
+                folderToSave,
+                time.year.toString() + time.month.toString() + time.monthDay.toString() + time.hour.toString() + time.minute.toString() + time.second.toString() + ".jpg"
+            ) // создать уникальное имя для файла основываясь на дате сохранения
+            fOut = FileOutputStream(file)
+            val bitmap: Bitmap = iv.drawable.toBitmap()
+            bitmap.compress(
+                Bitmap.CompressFormat.JPEG,
+                300,
+                fOut
+            ) // сохранять картинку в jpeg-формате с 85% сжатия.
+            fOut.flush()
+            fOut.close()
+            MediaStore.Images.Media.insertImage(
+                contentResolver,
+                file.absolutePath,
+                file.name,
+                file.name
+            ) // регистрация в фотоальбоме
+        } catch (e: Exception) // здесь необходим блок отслеживания реальных ошибок и исключений, общий Exception приведен в качестве примера
+        {
+            return e.message
+        }
+        return ""
     }
 
 
