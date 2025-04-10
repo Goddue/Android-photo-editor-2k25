@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Lay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DDDDDD">
@@ -8,17 +9,19 @@
         android:id="@+id/btn_nazad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Главная"
         android:layout_alignParentStart="true"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="8dp"
+        android:text="Главная" />
 
     <Button
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Сохранить"
         android:layout_alignParentEnd="true"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:text="Сохранить" />
 
 
     <ImageView
@@ -39,10 +42,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/scroll_buttons"
-        android:orientation="vertical"
-        android:visibility="gone"
         android:background="@android:color/white"
-        android:padding="8dp">
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="visible">
+
+        <SeekBar
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <HorizontalScrollView
@@ -58,18 +66,36 @@
             android:orientation="horizontal"
             android:padding="8dp">
 
-            <Button android:id="@+id/btn_function1" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function2" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function3" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function4" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function5" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function6" style="@style/FilterButton" />
+            <Button
+                android:id="@+id/btn_function1"
+                style="@style/FilterButton" />
+
+            <Button
+                android:id="@+id/btn_function2"
+                style="@style/FilterButton" />
+
+            <Button
+                android:id="@+id/btn_function3"
+                style="@style/FilterButton" />
+
+            <Button
+                android:id="@+id/btn_function4"
+                style="@style/FilterButton" />
+
+            <Button
+                android:id="@+id/btn_function5"
+                style="@style/FilterButton" />
+
+            <Button
+                android:id="@+id/btn_function6"
+                style="@style/FilterButton" />
 
             <Button
                 android:id="@+id/neuron"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Button" />
+
         </LinearLayout>
     </HorizontalScrollView>
 
