@@ -75,10 +75,10 @@ class ekran_redact : AppCompatActivity() {
         }
 
         listOf(
-            R.id.btn_function1 to "contrast",
-            R.id.btn_function2 to "brightness",
-            R.id.btn_function3 to "Фильтр 3",
-            R.id.btn_function4 to "Фильтр 4",
+            R.id.btn_function1 to "brightness",
+            R.id.btn_function2 to "contrast",
+            R.id.btn_function3 to "sharpness",
+            R.id.btn_function4 to "noise_reduction",
             R.id.btn_function5 to "Фильтр 5",
             R.id.btn_function6 to "Фильтр 6"
         ).forEach { (buttonId, filter) ->
@@ -126,7 +126,7 @@ class ekran_redact : AppCompatActivity() {
     private fun setupSliderForFilter(filter: String) {
         when (filter) {
             "contrast" -> {
-                slider.max = 200 // Пример диапазона для контраста
+                slider.max = 100 // Пример диапазона для контраста
             }
             // Добавьте настройки для других фильтров
             else -> {
@@ -138,7 +138,7 @@ class ekran_redact : AppCompatActivity() {
     // Стандартные значения для каждого фильтра
     private fun getDefaultValue(filter: String): Int {
         return when (filter) {
-            "contrast" -> 100 // Среднее значение для контраста
+            "contrast" -> 50 // Среднее значение для контраста
             else -> 50
         }
     }
@@ -148,12 +148,12 @@ class ekran_redact : AppCompatActivity() {
         val imageView = izobrazheniye
         when (filter) {
             "contrast" -> {
-                val contrast = value / 100.0f // Пример преобразования значения
+                val contrast = value / 100.0f
                 val matrix = ColorMatrix().apply { setScale(contrast, contrast, contrast, 1f) }
                 imageView.colorFilter = ColorMatrixColorFilter(matrix)
             }
             "brightness" -> {
-                val brightness = value - 50 // Пример: [-50..50]
+                val brightness = value - 50
                 val matrix = ColorMatrix().apply {
                     setScale(1f, 1f, 1f, 1f)
                     postConcat(
@@ -169,7 +169,25 @@ class ekran_redact : AppCompatActivity() {
                 }
                 imageView.colorFilter = ColorMatrixColorFilter(matrix)
             }
-            // Реализуйте другие фильтры
+            "sharpness" -> {
+                // Упрощенная реализация через усиление контраста
+                val sharpnessFactor = 1.0f + (value / 200.0f)
+                val matrix = ColorMatrix(
+                    floatArrayOf(
+                        sharpnessFactor, 0f, 0f, 0f, 0f,
+                        0f, sharpnessFactor, 0f, 0f, 0f,
+                        0f, 0f, sharpnessFactor, 0f, 0f,
+                        0f, 0f, 0f, 1f, 0f
+                    )
+                )
+                imageView.colorFilter = ColorMatrixColorFilter(matrix)
+            }
+            "noise_reduction" -> {
+                // Упрощенная реализация через снижение контраста
+                val noiseReduction = 1.0f - (value / 400.0f)
+                val matrix = ColorMatrix().apply { setScale(noiseReduction, noiseReduction, noiseReduction, 1f) }
+                imageView.colorFilter = ColorMatrixColorFilter(matrix)
+            }
         }
     }
 
