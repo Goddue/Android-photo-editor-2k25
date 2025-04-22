@@ -5,18 +5,20 @@
     android:id="@+id/camera_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".okno_vhoda">
+    tools:context=".okno_vhoda"
+    android:background="@drawable/fon">
 
     <TextView
         android:id="@+id/vhod_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="vhod_label"
+        android:text="Вход"
+        style="@style/MontserratTitle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <EditText
         android:id="@+id/vhod_name"
@@ -24,13 +26,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="Name"
+        android:hint="Введите никнейм"
+        style="@style/CustomButtonStyleOpacity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.250" />
 
     <EditText
         android:id="@+id/vhod_password"
@@ -38,22 +40,36 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|textPassword"
-        android:hint="vhod_password"
+        android:hint="Введите пароль"
+        style="@style/CustomButtonStyleOpacity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350"/>
 
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/vhod_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="vhod_button"
+        android:text="Войти"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.632" />
+        app:layout_constraintVertical_bias="0.450" />
+
+    <TextView
+        android:id="@+id/text_niz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="С возвращением!"
+        style="@style/MontserratTextNiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,38 +4,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fon">
 
     <TextView
         android:id="@+id/avtoriz_predl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="avtoriz"
+        android:text="Авторизация"
+        style="@style/MontserratTitle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintVertical_bias="0.1" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/vhod_vibor_ekr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="vhod"
+        android:text="Авторизоваться"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
+        app:layout_constraintVertical_bias="0.250" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/propusk_vibor_ekr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="propusk"
+        android:text="Пропустить"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
+
+    <TextView
+        android:id="@+id/text_niz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Рады Вас видеть!"
+        style="@style/MontserratTextNiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
 </androidx.constraintlayout.widget.ConstraintLayout>

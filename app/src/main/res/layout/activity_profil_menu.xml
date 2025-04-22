@@ -5,13 +5,15 @@
     android:id="@+id/camera_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profil_menu">
+    tools:context=".profil_menu"
+    android:background="@drawable/fon">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/domoy_test_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Сменить профиль"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

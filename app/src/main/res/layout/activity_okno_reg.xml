@@ -5,18 +5,20 @@
     android:id="@+id/camera_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".okno_reg">
+    tools:context=".okno_reg"
+    android:background="@drawable/fon">
 
     <TextView
         android:id="@+id/registr_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="registr_label"
+        android:text="Регистрация"
+        style="@style/MontserratTitle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <EditText
         android:id="@+id/registr_name"
@@ -24,13 +26,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="Введите никнейм"
+        style="@style/CustomButtonStyleOpacity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintVertical_bias="0.20" />
 
     <EditText
         android:id="@+id/parol_perviy"
@@ -38,11 +41,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|textPassword"
-        android:text="Name"
+        android:hint="Введите пароль"
+        style="@style/CustomButtonStyleOpacity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.30"/>
 
     <EditText
         android:id="@+id/parol_povtor"
@@ -50,22 +55,36 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text|textPassword"
-        android:text="Name"
+        android:hint="Повторите пароль"
+        style="@style/CustomButtonStyleOpacity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.40" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registr_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="registr_button"
+        android:text="Зарегистрироваться"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
+        app:layout_constraintVertical_bias="0.50" />
+
+    <TextView
+        android:id="@+id/text_niz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мы рады новым пользователям!"
+        style="@style/MontserratTextNiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

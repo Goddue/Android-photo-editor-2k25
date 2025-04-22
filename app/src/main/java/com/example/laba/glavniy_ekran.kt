@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+import android.widget.ImageButton
+import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.FileProvider
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -16,9 +18,9 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class glavniy_ekran : AppCompatActivity() {
-    lateinit var pereh_v_profil_button: Button
-    lateinit var cam_button: FloatingActionButton
-    lateinit var gallery_button: FloatingActionButton
+    lateinit var pereh_v_profil_button: ImageButton
+    lateinit var cam_button: AppCompatButton
+    lateinit var gallery_button: AppCompatButton
     private var currentPhotoPath: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

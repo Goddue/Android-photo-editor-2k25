@@ -3,98 +3,256 @@
     android:id="@+id/Lay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDDDDD">
+    android:background="@drawable/fon2">
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_nazad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_margin="8dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginEnd="8dp"
-        android:text="Главная" />
-
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentEnd="true"
-        android:layout_margin="8dp"
-        android:text="Сохранить" />
+        android:background="@drawable/round_button"
+        android:src="@drawable/iconka"
+        android:contentDescription="@string/profile"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="6dp"
+        android:text="Главная"
+         />
 
+    <ImageButton
+        android:id="@+id/btn_save"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:text="Сохранить"
+        android:background="@drawable/round_button"
+        android:src="@drawable/down2"
+        android:contentDescription="@string/profile"
+        android:scaleType="centerInside"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        />
 
     <ImageView
         android:id="@+id/izobrazheniye"
         android:layout_width="364dp"
-        android:layout_height="506dp"
+        android:layout_height="490dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_marginEnd="22dp"
-        android:layout_marginBottom="131dp"
+        android:layout_marginTop="80dp"
         android:adjustViewBounds="true"
-        android:background="@android:color/white"
+        android:background="@color/my_black"
         android:contentDescription="Изображение для редактирования"
         android:scaleType="fitCenter" />
 
     <LinearLayout
         android:id="@+id/slider_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_above="@id/scroll_buttons"
-        android:background="@android:color/white"
+        android:background="@color/my_black"
         android:orientation="vertical"
         android:padding="8dp"
-        android:visibility="visible">
+        android:visibility="visible"
+        android:layout_marginBottom="1dp">
 
         <SeekBar
             android:id="@+id/slider"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="24dp"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:thumb="@drawable/seekbar_thumb" />
+
     </LinearLayout>
 
     <HorizontalScrollView
         android:id="@+id/scroll_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/my_black"
         android:layout_alignParentBottom="true"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:orientation="horizontal"
             android:padding="8dp">
 
-            <Button
-                android:id="@+id/btn_function1"
-                style="@style/FilterButton" />
-
-            <Button
-                android:id="@+id/btn_function2"
-                style="@style/FilterButton" />
-
-            <Button
-                android:id="@+id/btn_function3"
-                style="@style/FilterButton" />
-
-            <Button
-                android:id="@+id/btn_function4"
-                style="@style/FilterButton" />
-
-            <Button
-                android:id="@+id/btn_function5"
-                style="@style/FilterButton" />
-
-            <Button
-                android:id="@+id/btn_function6"
-                style="@style/FilterButton" />
-
-            <Button
-                android:id="@+id/neuron"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="16dp">
+
+            <ImageButton
+                android:id="@+id/btn_function1"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/rounded_square_button"
+                android:scaleType="centerInside"
+                android:src="@drawable/f1"
+                android:contentDescription="Яркость"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MontserratTextZoloto2"
+                android:text="Яркость"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="16dp">
+
+                <ImageButton
+                    android:id="@+id/btn_function2"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/rounded_square_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/f2"
+                    android:contentDescription="Контраст"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MontserratTextZoloto2"
+                    android:text="Контраст"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="16dp">
+
+                <ImageButton
+                    android:id="@+id/btn_function3"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/rounded_square_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/f3"
+                    android:contentDescription="Резкость"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MontserratTextZoloto2"
+                    android:text="Резкость"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="16dp">
+
+                <ImageButton
+                    android:id="@+id/btn_function4"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/rounded_square_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/f4"
+                    android:contentDescription="Шум"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MontserratTextZoloto2"
+                    android:text="Шум"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="16dp">
+
+                <ImageButton
+                    android:id="@+id/btn_function5"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/rounded_square_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/f5"
+                    android:contentDescription="Мульт ИИ"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MontserratTextZoloto2"
+                    android:text="Мульт ИИ"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="16dp">
+
+                <ImageButton
+                    android:id="@+id/btn_function6"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/rounded_square_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/f5"
+                    android:contentDescription="Что-то"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MontserratTextZoloto2"
+                    android:text="Что-то ещё"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="16dp">
+
+                <ImageButton
+                    android:id="@+id/neuron"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/rounded_square_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/f5"
+                    android:contentDescription="Что-то"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MontserratTextZoloto2"
+                    android:text="Что-то ещё"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
 
         </LinearLayout>
     </HorizontalScrollView>

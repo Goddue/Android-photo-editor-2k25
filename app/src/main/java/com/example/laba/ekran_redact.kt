@@ -26,12 +26,17 @@ import android.graphics.ColorMatrix
 import android.graphics.ColorMatrixColorFilter
 import android.graphics.Paint
 import android.widget.SeekBar
+import android.widget.ImageButton
+
+import android.widget.LinearLayout
+import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatImageButton
 
 class ekran_redact : AppCompatActivity() {
     private lateinit var izobrazheniye: ImageView
-    private lateinit var btn_nazad: Button
-    private lateinit var btn_save: Button
-    private lateinit var btn_neuron: Button
+    private lateinit var btn_nazad: ImageButton
+    private lateinit var btn_save: ImageButton
+    private lateinit var btn_neuron: ImageButton
     private lateinit var sliderContainer: LinearLayout
     private lateinit var slider: SeekBar
     private val activeFilters = mutableSetOf<String>()
@@ -54,7 +59,7 @@ class ekran_redact : AppCompatActivity() {
         } ?: izobrazheniye.setImageResource(android.R.drawable.ic_menu_report_image)
 
         btn_nazad.setOnClickListener {
-            startActivity(Intent(this, glavniy_ekran::class.java))
+            startActivity(Intent(this, profil_menu::class.java))
             finish()
         }
         btn_neuron.setOnClickListener {
@@ -77,7 +82,7 @@ class ekran_redact : AppCompatActivity() {
             R.id.btn_function5 to "Фильтр 5",
             R.id.btn_function6 to "Фильтр 6"
         ).forEach { (buttonId, filter) ->
-            findViewById<Button>(buttonId).setOnClickListener { toggleSlider(filter) }
+            findViewById<ImageButton>(buttonId).setOnClickListener { toggleSlider(filter) }
         }
     }
 
