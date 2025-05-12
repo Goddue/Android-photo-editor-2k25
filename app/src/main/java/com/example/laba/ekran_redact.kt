@@ -139,6 +139,7 @@ class ekran_redact : AppCompatActivity() {
     private fun getDefaultValue(filter: String): Int {
         return when (filter) {
             "contrast" -> 50 // Среднее значение для контраста
+            "sharpness" -> 50
             else -> 50
         }
     }
@@ -148,12 +149,12 @@ class ekran_redact : AppCompatActivity() {
         val imageView = izobrazheniye
         when (filter) {
             "contrast" -> {
-                val contrast = value / 100.0f
+                val contrast = value/50.0f
                 val matrix = ColorMatrix().apply { setScale(contrast, contrast, contrast, 1f) }
                 imageView.colorFilter = ColorMatrixColorFilter(matrix)
             }
             "brightness" -> {
-                val brightness = value - 50
+                val brightness = value - 50.0f
                 val matrix = ColorMatrix().apply {
                     setScale(1f, 1f, 1f, 1f)
                     postConcat(
@@ -171,21 +172,35 @@ class ekran_redact : AppCompatActivity() {
             }
             "sharpness" -> {
                 // Упрощенная реализация через усиление контраста
-                val sharpnessFactor = 1.0f + (value / 200.0f)
-                val matrix = ColorMatrix(
-                    floatArrayOf(
-                        sharpnessFactor, 0f, 0f, 0f, 0f,
-                        0f, sharpnessFactor, 0f, 0f, 0f,
-                        0f, 0f, sharpnessFactor, 0f, 0f,
-                        0f, 0f, 0f, 1f, 0f
+                val sharpnessFactor = value / 100.0f
+                val matrix = ColorMatrix().apply{
+                    // Матрица усиления контраста
+                    set(
+                        floatArrayOf(
+                            1 + sharpnessFactor, -sharpnessFactor / 2, -sharpnessFactor / 2, 0f, 0f,
+                            -sharpnessFactor / 2, 1 + sharpnessFactor, -sharpnessFactor / 2, 0f, 0f,
+                            -sharpnessFactor / 2, -sharpnessFactor / 2, 1 + sharpnessFactor, 0f, 0f,
+                            0f, 0f, 0f, 1f, 0f
+                        )
                     )
-                )
+                }
                 imageView.colorFilter = ColorMatrixColorFilter(matrix)
             }
             "noise_reduction" -> {
-                // Упрощенная реализация через снижение контраста
-                val noiseReduction = 1.0f - (value / 400.0f)
-                val matrix = ColorMatrix().apply { setScale(noiseReduction, noiseReduction, noiseReduction, 1f) }
+                val strength = value / 100.0f // 0.0 - 1.0
+                val matrix = ColorMatrix().apply {
+                    // Матрица размытия (упрощенный Gaussian blur)
+                    set(
+                        floatArrayOf(
+                            0.8f * strength, 0.1f * strength, 0.1f * strength, 0f, 0f,
+                            0.1f * strength, 0.8f * strength, 0.1f * strength, 0f, 0f,
+                            0.1f * strength, 0.1f * strength, 0.8f * strength, 0f, 0f,
+                            0f, 0f, 0f, 1f, 0f
+                        )
+                    )
+                    // Дополнительное снижение контраста
+                    postConcat(ColorMatrix().apply { setSaturation(1f - strength * 0.5f) })
+                }
                 imageView.colorFilter = ColorMatrixColorFilter(matrix)
             }
         }
@@ -259,14 +274,39 @@ class ekran_redact : AppCompatActivity() {
         // Применяем все активные фильтры
         filterValues.forEach { (filter, value) ->
             when (filter) {
+//                "contrast" -> {
+//                    val contrast = value / 100f // Пример: 100 = 1.0f (оригинал)
+//                    val matrix = ColorMatrix().apply { setScale(contrast, contrast, contrast, 1f) }
+//                    paint.colorFilter = ColorMatrixColorFilter(matrix)
+//                    canvas.drawBitmap(result, 0f, 0f, paint)
+//                }
+//                "brightness" -> {
+//                    val brightness = value - 50 // Пример: [-50..50]
+//                    val matrix = ColorMatrix().apply {
+//                        setScale(1f, 1f, 1f, 1f)
+//                        postConcat(
+//                            ColorMatrix(
+//                                floatArrayOf(
+//                                    1f, 0f, 0f, 0f, brightness.toFloat(),
+//                                    0f, 1f, 0f, 0f, brightness.toFloat(),
+//                                    0f, 0f, 1f, 0f, brightness.toFloat(),
+//                                    0f, 0f, 0f, 1f, 0f
+//                                )
+//                            )
+//                        )
+//                    }
+//                    paint.colorFilter = ColorMatrixColorFilter(matrix)
+//                    canvas.drawBitmap(result, 0f, 0f, paint)
+//                }
+                // Добавьте другие фильтры по аналогии
                 "contrast" -> {
-                    val contrast = value / 100f // Пример: 100 = 1.0f (оригинал)
+                    val contrast = value/50.0f
                     val matrix = ColorMatrix().apply { setScale(contrast, contrast, contrast, 1f) }
                     paint.colorFilter = ColorMatrixColorFilter(matrix)
                     canvas.drawBitmap(result, 0f, 0f, paint)
                 }
                 "brightness" -> {
-                    val brightness = value - 50 // Пример: [-50..50]
+                    val brightness = value - 50.0f
                     val matrix = ColorMatrix().apply {
                         setScale(1f, 1f, 1f, 1f)
                         postConcat(
@@ -283,7 +323,30 @@ class ekran_redact : AppCompatActivity() {
                     paint.colorFilter = ColorMatrixColorFilter(matrix)
                     canvas.drawBitmap(result, 0f, 0f, paint)
                 }
-                // Добавьте другие фильтры по аналогии
+                "sharpness" -> {
+                    // Упрощенная реализация через усиление контраста
+                    val sharpnessFactor = value / 100.0f
+                    val matrix = ColorMatrix().apply{
+                        // Матрица усиления контраста
+                        set(
+                            floatArrayOf(
+                                1 + sharpnessFactor, -sharpnessFactor / 2, -sharpnessFactor / 2, 0f, 0f,
+                                -sharpnessFactor / 2, 1 + sharpnessFactor, -sharpnessFactor / 2, 0f, 0f,
+                                -sharpnessFactor / 2, -sharpnessFactor / 2, 1 + sharpnessFactor, 0f, 0f,
+                                0f, 0f, 0f, 1f, 0f
+                            )
+                        )
+                    }
+                    paint.colorFilter = ColorMatrixColorFilter(matrix)
+                    canvas.drawBitmap(result, 0f, 0f, paint)
+                }
+                "noise_reduction" -> {
+                    // Упрощенная реализация через снижение контраста
+                    val noiseReduction = value / 400.0f
+                    val matrix = ColorMatrix().apply { setScale(noiseReduction, noiseReduction, noiseReduction, 1f) }
+                    paint.colorFilter = ColorMatrixColorFilter(matrix)
+                    canvas.drawBitmap(result, 0f, 0f, paint)
+                }
             }
         }
         return result
