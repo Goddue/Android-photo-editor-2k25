@@ -294,7 +294,7 @@ class ekran_redact : AppCompatActivity() {
 
                 Toast.makeText(this, "Изображение сохранено ($quality)", Toast.LENGTH_SHORT).show()
                 // Optionally start the next activity after save
-                // startActivity(Intent(this, zaversheniye::class.java))
+                 startActivity(Intent(this, zaversheniye::class.java))
             } catch (e: Exception) {
                 e.printStackTrace()
                 Toast.makeText(this, "Ошибка сохранения: ${e.message}", Toast.LENGTH_SHORT).show()
