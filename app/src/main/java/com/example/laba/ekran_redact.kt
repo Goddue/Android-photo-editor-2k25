@@ -88,7 +88,10 @@ class ekran_redact : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.tool_crop).setOnClickListener { enterEditingMode(EditingMode.CROP) }
         findViewById<LinearLayout>(R.id.tool_sketch).setOnClickListener { enterEditingMode(EditingMode.DRAWING) }
         findViewById<LinearLayout>(R.id.tool_text).setOnClickListener { showTextInputDialog() }
+        //НИКИТА СМОТРИ СЮДА
         findViewById<LinearLayout>(R.id.tool_neuro).setOnClickListener { neuronActivation(imageEditorView) }
+        findViewById<LinearLayout>(R.id.tool_neuro2).setOnClickListener { neuronActivation(imageEditorView, "https://www.cutout.pro/api/v1/cartoonSelfie?cartoonType=1") }
+
 
         // Slider Listener
         slider.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -129,7 +132,7 @@ class ekran_redact : AppCompatActivity() {
         updateUIVisibility(EditingMode.NONE) // Call the helper to set initial visibility
     }
 
-    private fun neuronActivation(iv: ImageEditorView) {
+    private fun neuronActivation(iv: ImageEditorView, urlka: String = "https://www.cutout.pro/api/v1/matting?mattingType=6") {
         val apiKey = "0d25d9b9313a46b9b66d6ce1b4dc8e8a" // Замените на реальный ключ от Cutout.pro
 
         // Получаем изображение из ImageView
@@ -152,7 +155,7 @@ class ekran_redact : AppCompatActivity() {
 
             // Формируем запрос
             val request = Request.Builder()
-                .url("https://www.cutout.pro/api/v1/matting?mattingType=6")
+                .url(urlka)
                 .header("APIKEY", apiKey)
                 .post(requestBody)
                 .build()
