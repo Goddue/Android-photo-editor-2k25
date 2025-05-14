@@ -3,17 +3,23 @@ package com.example.laba
 // --- Imports ---
 import android.content.Intent
 import android.graphics.*
+import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.text.format.Time
+import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.drawToBitmap
 import java.io.File
 import java.io.FileOutputStream
 import okhttp3.* // Although imported, okhttp3 is not used in the provided code snippet
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.RequestBody.Companion.toRequestBody
+import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 // Note: Data classes and enums (ImageOverlay, TextOverlay, EditingMode)
@@ -26,7 +32,6 @@ class ekran_redact : AppCompatActivity() {
     private lateinit var imageEditorView: ImageEditorView
     private lateinit var btnNazad: ImageButton // Renamed for clarity
     private lateinit var btnSave: ImageButton // Renamed for clarity
-    private lateinit var btnNeuron: ImageButton // Renamed for clarity
     private lateinit var sliderContainer: LinearLayout
     private lateinit var slider: SeekBar
     private lateinit var editingControlsContainer: LinearLayout
@@ -72,7 +77,6 @@ class ekran_redact : AppCompatActivity() {
 
         // --- Set Click Listeners ---
         btnNazad.setOnClickListener { onBackPressed() } // Use onBackPressed for standard back behavior
-        btnNeuron.setOnClickListener { /* TODO: Implement neuron functionality */ }
         btnSave.setOnClickListener { showSaveQualityDialog() }
 
         // Set click listeners for filter tools using the map
@@ -126,56 +130,82 @@ class ekran_redact : AppCompatActivity() {
     }
 
     private fun neuronActivation(iv: ImageEditorView) {
-        // API ключ (замените на ваш реальный ключ)
-        val apiKey = "sk-LiU5q1cZgI6NusPZwGvBGMUsYfJjlcetco2kJ1cZiz6uwuGX"
-        val prompt = "Make the image look like a cartoon"
+        val apiKey = "0d25d9b9313a46b9b66d6ce1b4dc8e8a" // Замените на реальный ключ от Cutout.pro
 
-        // Создаем тело запроса
-        val requestBody = MultipartBody.Builder()
-            .setType(MultipartBody.FORM)
-            .addFormDataPart("prompt", prompt) // Промпт для генерации изображения
-            .addFormDataPart("output_format", "jpeg") // Формат выходного изображения
-            .build()
+        // Получаем изображение из ImageView
+        val bitmap = iv.drawToBitmap()
+        try {
+            // Конвертируем Bitmap в байтовый поток PNG
+            val outputStream = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+            val imageBytes = outputStream.toByteArray()
 
-        // Создаем запрос
-        val request = Request.Builder()
-            .url("https://api.stability.ai/v2beta/stable-image/generate/sd3") // URL API
-            .header("Authorization", "Bearer $apiKey") // Авторизация
-            .header("Accept", "image/*") // Заголовок для принятия изображения
-            .post(requestBody)
-            .build()
+            // Создаем тело запроса с изображением
+            val requestBody = MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart(
+                    "file",
+                    "image.png",
+                    imageBytes.toRequestBody("image/png".toMediaTypeOrNull(), 0, imageBytes.size)
+                )
+                .build()
 
-        // Выполняем запрос
-        val client = OkHttpClient()
-        client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                // Обработка ошибки
-                runOnUiThread {
-                    Toast.makeText(this@ekran_redact, "Ошибка: ${e.message}", Toast.LENGTH_SHORT).show()
+            // Формируем запрос
+            val request = Request.Builder()
+                .url("https://www.cutout.pro/api/v1/matting?mattingType=6")
+                .header("APIKEY", apiKey)
+                .post(requestBody)
+                .build()
+
+            // Выполняем асинхронный запрос
+            OkHttpClient().newCall(request).enqueue(object : Callback {
+                override fun onFailure(call: Call, e: IOException) {
+                    showError("Ошибка сети: ${e.message}")
                 }
-            }
 
-            override fun onResponse(call: Call, response: Response) {
-                if (response.isSuccessful) {
-                    // Получаем байты изображения из ответа
-                    val imageBytes = response.body?.bytes()
+                override fun onResponse(call: Call, response: Response) {
+                    try {
+                        if (response.isSuccessful) {
+                            val body = response.body ?: throw IOException("Empty response body")
+                            val bytes = body.bytes()
+                            if (bytes.isEmpty()) {
+                                throw IOException("Empty image data")
+                            }
 
-                    // Преобразуем байты в Bitmap
-                    val bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes?.size ?: 0)
+                            // Проверьте в логах размер полученных данных
+                            Log.d("API_RESPONSE", "Received ${bytes.size} bytes")
 
-                    // Устанавливаем Bitmap в ImageView
-                    runOnUiThread {
-                        iv.setBitmap(bitmap)
-                        Toast.makeText(this@ekran_redact, "Изображение успешно загружено", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
-                    // Обработка неуспешного ответа
-                    runOnUiThread {
-                        Toast.makeText(this@ekran_redact, "Ошибка: ${response.message}", Toast.LENGTH_SHORT).show()
+                            val resultBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size, )
+                            if (resultBitmap == null) {
+                                throw IOException("Failed to decode image")
+                            }
+                            updateImageView(resultBitmap)
+                        } else {
+                            val errorBody = response.body?.string() ?: "No error body"
+                            showError("API Error ${response.code}: $errorBody")
+                        }
+                    } catch (e: Exception) {
+                        showError("Processing error: ${e.message}")
                     }
                 }
-            }
-        })
+            })
+        } catch (e: Exception) {
+            showError("Ошибка обработки: ${e.message}")
+        }
+    }
+
+    // Вспомогательные функции для работы с UI
+    private fun updateImageView(bitmap: Bitmap) {
+        runOnUiThread {
+            findViewById<ImageEditorView>(R.id.imageEditorView).setBitmap(bitmap)
+            Toast.makeText(this@ekran_redact, "Изображение обновлено", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showError(message: String) {
+        runOnUiThread {
+            Toast.makeText(this@ekran_redact, message, Toast.LENGTH_SHORT).show()
+        }
     }
 
     // --- Setup Views Helper ---
