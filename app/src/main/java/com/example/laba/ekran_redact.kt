@@ -4,6 +4,7 @@ package com.example.laba
 import android.content.Context
 import android.content.Intent
 import android.graphics.*
+import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -18,7 +19,9 @@ import java.io.FileOutputStream
 import java.io.OutputStream
 import okhttp3.* // Although imported, okhttp3 is not used in the provided code snippet
 import okhttp3.MediaType.Companion.toMediaType // Although imported, okhttp3 is not used in the provided code snippet
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody // Although imported, okhttp3 is not used in the provided code snippet
+import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 // Note: Data classes and enums (ImageOverlay, TextOverlay, EditingMode)
@@ -129,6 +132,60 @@ class ekran_redact : AppCompatActivity() {
         updateUIVisibility(EditingMode.NONE) // Call the helper to set initial visibility
     }
 
+    private fun neuronActivation(iv: ImageView) {
+        val apiKey = "2f38dc4bc02341adaba300f1771fb19d" // Замените на реальный ключ от Cutout.pro
+
+        // Получаем изображение из ImageView
+        val drawable = iv.drawable ?: run {
+            Toast.makeText(this@ekran_redact, "Сначала загрузите изображение", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        try {
+            // Конвертируем Drawable в Bitmap
+            val bitmap = (drawable as BitmapDrawable).bitmap
+
+            // Конвертируем Bitmap в байтовый поток PNG
+            val outputStream = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+            val imageBytes = outputStream.toByteArray()
+
+            // Создаем тело запроса с изображением
+            val requestBody = MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart(
+                    "file",
+                    "file.png",
+                    imageBytes.toRequestBody("image/png".toMediaTypeOrNull(), 0, imageBytes.size)
+                )
+                .build()
+
+            // Формируем запрос
+            val request = Request.Builder()
+                .url("https://www.cutout.pro/api/v1/cartoonSelfie?cartoonType=1")
+                .header("APIKEY", apiKey)
+                .post(requestBody)
+                .build()
+
+            // Выполняем асинхронный запрос
+            OkHttpClient().newCall(request).enqueue(object : Callback {
+                override fun onFailure(call: Call, e: IOException) {
+                }
+
+                override fun onResponse(call: Call, response: Response) {
+                    if (response.isSuccessful) {
+                        response.body?.bytes()?.let { bytes ->
+                            val resultBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+                            updateImageView(resultBitmap)
+                        }
+                    } else {
+                    }
+                }
+            })
+        } catch (e: Exception) {
+        }
+    }
+
     // --- Setup Views Helper ---
     private fun setupViews() {
         imageEditorView = findViewById(R.id.imageEditorView)
@@ -191,7 +248,7 @@ class ekran_redact : AppCompatActivity() {
             .setTitle(getString(R.string.save))
             .setMessage(getString(R.string.choose_save_quality))
             .setPositiveButton(getString(R.string.good_quality)) { _, _ -> saveImage(85) }
-            .setNegativeButton(getString(R.string.low_quality)) { _, _ -> saveImage(50) }
+            .setNegativeButton(getString(R.string.low_quality)) { _, _ -> saveImage(0) }
             .show()
     }
 
