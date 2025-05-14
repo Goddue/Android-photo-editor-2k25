@@ -14,4 +14,46 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">Фильтр</item>
     </style>
+    <!-- Базовые стили текста -->
+    <style name="MontserratTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MontserratTextNiz" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="MontserratTextZoloto" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gold</item>
+    </style>
+
+    <!-- Стили кнопок -->
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_default_background</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="CustomButtonStyleOpacity" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:alpha">0.8</item>
+        <item name="android:background">@drawable/btn_default_background</item>
+    </style>
+
+    <style name="CustomButtonStyleZoloto" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:background">@drawable/btn_gold_background</item>
+    </style>
 </resources>

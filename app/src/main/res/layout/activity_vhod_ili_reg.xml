@@ -4,39 +4,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fon">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/vhod_vibor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Войти"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.250" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registr_vibor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Зарегестрироваться"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641" />
+        app:layout_constraintVertical_bias="0.350" />
 
     <TextView
         android:id="@+id/v_r"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вход/регистрация"
+        android:text="Выберите метод\nвхода"
+        style="@style/MontserratTitle"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.255" />
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/text_niz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Хорошего дня!"
+        style="@style/MontserratTextNiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
 </androidx.constraintlayout.widget.ConstraintLayout>

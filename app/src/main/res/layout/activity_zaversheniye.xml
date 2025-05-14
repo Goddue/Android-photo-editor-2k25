@@ -5,78 +5,130 @@
     android:id="@+id/camera_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".zaversheniye">
+    tools:context=".zaversheniye"
+    android:background="@drawable/fon">
 
     <TextView
         android:id="@+id/zaversh_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
-        android:text="zaversheniye"
+        android:text="Сохранено"
+        style="@style/MontserratTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/predlozh_otsenku_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="260dp"
         android:text="Оценить"
+        style="@style/CustomButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.350" />
 
     <LinearLayout
         android:id="@+id/rating_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center"
         android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="20dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9">
+        app:layout_constraintVertical_bias="1.">
 
         <RatingBar
             android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <Button
+        <TextView
+            android:id="@+id/text_ocenka"
+            style="@style/MontserratTextZoloto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="Оцените наше приложение Magic Photo. Это поможет нам сделать его ещё лучше!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_otpravka"
+            style="@style/CustomButtonStyleZoloto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Отправить" />
+            android:layout_marginStart="95dp"
+            android:layout_marginEnd="95dp"
+            android:layout_marginBottom="10dp"
+            android:text="Оценить" />
+
+        <TextView
+            android:id="@+id/text_niz_ocenka"
+            style="@style/MontserratTextNiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Благодарим за оставленный отзыв!" />
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/podpiska_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="340dp"
-        android:text="подписка"
+        android:text="Подписка"
+        style="@style/CustomButtonStyleZoloto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.450" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/perehod_osnovn_ekran"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="412dp"
         android:text="На главную"
+        style="@style/CustomButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.250" />
+
+    <TextView
+        android:id="@+id/text_niz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ждем Вас снова!"
+        style="@style/MontserratTextNiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51" />
 
     <WebView
         android:id="@+id/web"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="invisible" />
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

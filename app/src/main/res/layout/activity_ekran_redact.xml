@@ -1,76 +1,435 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDDDDD">
+    tools:context=".ekran_redact">
 
-    <Button
-        android:id="@+id/btn_nazad"
+    <LinearLayout
+        android:id="@+id/topControlsLayout"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@android:color/darker_gray"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_nazad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/icon_back"
+            android:padding="8dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/> <ImageButton
+        android:id="@+id/neuron"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Главная"
-        android:layout_alignParentStart="true"
-        android:layout_margin="8dp"/>
+        android:src="@android:drawable/ic_menu_share"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/icon_neural_network"
+        android:padding="8dp"/>
 
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Сохранить"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="8dp"/>
+        <ImageButton
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_save"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/icon_save"
+            android:padding="8dp"/>
 
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/izobrazheniye"
-        android:layout_width="364dp"
-        android:layout_height="506dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="131dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/white"
-        android:contentDescription="Изображение для редактирования"
-        android:scaleType="fitCenter" />
+    <FrameLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/topControlsLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/slider_container"
+        app:layout_constraintVertical_weight="1">
+
+        <com.example.laba.ImageEditorView
+            android:id="@+id/imageEditorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
 
     <LinearLayout
         android:id="@+id/slider_container"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_above="@id/scroll_buttons"
         android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:background="#E0E0E0"
         android:visibility="gone"
-        android:background="@android:color/white"
-        android:padding="8dp">
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/toolsLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <SeekBar
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
-    <HorizontalScrollView
-        android:id="@+id/scroll_buttons"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/editingControlsContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:fillViewport="true">
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:background="#E0E0E0"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/toolsLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_cancel_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/btn_apply_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cropOptionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingVertical="8dp"
+        android:background="#E0E0E0"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/toolsLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_crop_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_vertical_10"/>
+
+        <Button
+            android:id="@+id/btn_crop_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_horizontal_10"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btn_crop_all_sides"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_all_sides_10"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/brushControlsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingVertical="8dp"
+        android:background="#E0E0E0"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/toolsLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brush_color"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
-
-            <Button android:id="@+id/btn_function1" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function2" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function3" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function4" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function5" style="@style/FilterButton" />
-            <Button android:id="@+id/btn_function6" style="@style/FilterButton" />
-
-            <Button
-                android:id="@+id/neuron"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button" />
+            android:layout_marginTop="4dp">
+            <Button android:id="@+id/btn_color_black" android:layout_width="36dp" android:layout_height="36dp" android:backgroundTint="@color/black" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btn_color_red" android:layout_width="36dp" android:layout_height="36dp" android:backgroundTint="@color/red" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btn_color_green" android:layout_width="36dp" android:layout_height="36dp" android:backgroundTint="@color/green" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btn_color_blue" android:layout_width="36dp" android:layout_height="36dp" android:backgroundTint="@color/blue"/>
         </LinearLayout>
-    </HorizontalScrollView>
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brush_size"
+            android:layout_marginTop="8dp"/>
+
+        <SeekBar
+            android:id="@+id/brush_size_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:min="5"
+            android:max="100"
+            android:progress="10"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/toolsLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="8dp"
+        android:background="@android:color/darker_gray">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp">
+
+                <LinearLayout
+                    android:id="@+id/tool_brightness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:contentDescription="@string/icon_brightness"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/brightness"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tool_contrast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:contentDescription="@string/icon_contrast"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contrast"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tool_sharpness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:contentDescription="@string/icon_sharpness"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sharpness"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tool_noise_reduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:contentDescription="@string/icon_noise_reduction"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/noise_reduction"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tool_exposure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:contentDescription="@string/icon_exposure"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/exposure"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tool_saturation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:contentDescription="@string/icon_saturation"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saturation"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tool_warmth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:contentDescription="@string/icon_warmth"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/warmth"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tool_crop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_crop"
+                        android:contentDescription="@string/icon_crop"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crop"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tool_sketch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:contentDescription="@string/icon_sketch"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sketch"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tool_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:drawable/ic_menu_add"
+                        android:contentDescription="@string/icon_text"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_text"/>
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

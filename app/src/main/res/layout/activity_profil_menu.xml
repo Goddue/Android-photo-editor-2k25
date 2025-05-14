@@ -7,37 +7,78 @@
     android:layout_height="match_parent"
     tools:context=".profil_menu">
 
-    <Button
-        android:id="@+id/domoy_test_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Сменить профиль"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
-
     <TextView
         android:id="@+id/prosmotr_logina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="**просмотр логина**"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/prosmotr_parolya"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        android:layout_marginBottom="8dp"/>
 
     <TextView
         android:id="@+id/prosmotr_parolya"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="**просмотр пароля**"
+        app:layout_constraintBottom_toTopOf="@id/domoy_test_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/domoy_test_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сменить профиль"
+        app:layout_constraintBottom_toTopOf="@id/vyyti_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/vyyti_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выйти из аккаунта"
+        app:layout_constraintBottom_toTopOf="@id/vernutsya_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/avtorizovatsya_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Авторизоваться"
+        app:layout_constraintBottom_toTopOf="@id/vernutsya_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/vernutsya_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вернуться"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="32dp"/>
+
+    <ImageView
+        android:id="@+id/avatar_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/avatar"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@id/prosmotr_logina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

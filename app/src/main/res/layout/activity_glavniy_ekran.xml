@@ -5,56 +5,88 @@
     android:id="@+id/camera_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".glavniy_ekran">
+    tools:context=".glavniy_ekran"
+    android:background="@drawable/fon2">
 
-
-    <Button
+    <ImageButton
         android:id="@+id/pereh_v_profil_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Профиль"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/round_button"
+        android:src="@drawable/iconka"
+        android:contentDescription="@string/profile"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintHorizontal_bias="0.959"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.009" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <TextView
+        android:id="@+id/vhod_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Импорт\nизображения"
+        android:gravity="center"
+        style="@style/MontserratTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/gallery_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
+        android:text="Галерея"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648"
-        app:srcCompat="@android:drawable/ic_menu_gallery" />
+        app:layout_constraintVertical_bias="0.250" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cam_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
+        android:text="Камера"
+        style="@style/CustomButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        app:layout_constraintVertical_bias="0.350" />
+
+    <TextView
+        android:id="@+id/text_niz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Новые идеи, новые проекты!"
+        style="@style/MontserratTextNiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <ImageView
+        android:id="@+id/imageIllustration"
+        android:layout_width="412dp"
+        android:layout_height="311dp"
+        android:src="@drawable/reclama"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView2"
-        android:layout_width="404dp"
-        android:layout_height="197dp"
-        android:layout_marginTop="84dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
