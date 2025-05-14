@@ -31,14 +31,7 @@
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/> <ImageButton
-        android:id="@+id/neuron"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_share"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/icon_neural_network"
-        android:padding="8dp"/>
+            android:layout_weight="1"/>
 
         <ImageButton
             android:id="@+id/btn_save"
@@ -230,204 +223,259 @@
                     android:id="@+id/tool_brightness"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_manage"
-                        android:contentDescription="@string/icon_brightness"/>
+                        android:contentDescription="@string/icon_brightness"
+                        android:src="@android:drawable/ic_menu_manage" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/brightness"/>
+                        android:text="@string/brightness" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/tool_contrast"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_manage"
-                        android:contentDescription="@string/icon_contrast"/>
+                        android:contentDescription="@string/icon_contrast"
+                        android:src="@android:drawable/ic_menu_manage" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/contrast"/>
+                        android:text="@string/contrast" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/tool_sharpness"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_manage"
-                        android:contentDescription="@string/icon_sharpness"/>
+                        android:contentDescription="@string/icon_sharpness"
+                        android:src="@android:drawable/ic_menu_manage" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sharpness"/>
+                        android:text="@string/sharpness" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/tool_noise_reduction"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_manage"
-                        android:contentDescription="@string/icon_noise_reduction"/>
+                        android:contentDescription="@string/icon_noise_reduction"
+                        android:src="@android:drawable/ic_menu_manage" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/noise_reduction"/>
+                        android:text="@string/noise_reduction" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/tool_exposure"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_manage"
-                        android:contentDescription="@string/icon_exposure"/>
+                        android:contentDescription="@string/icon_exposure"
+                        android:src="@android:drawable/ic_menu_manage" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/exposure"/>
+                        android:text="@string/exposure" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/tool_saturation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_manage"
-                        android:contentDescription="@string/icon_saturation"/>
+                        android:contentDescription="@string/icon_saturation"
+                        android:src="@android:drawable/ic_menu_manage" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/saturation"/>
+                        android:text="@string/saturation" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/tool_warmth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_manage"
-                        android:contentDescription="@string/icon_warmth"/>
+                        android:contentDescription="@string/icon_warmth"
+                        android:src="@android:drawable/ic_menu_manage" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/warmth"/>
+                        android:text="@string/warmth" />
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:id="@+id/tool_crop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_crop"
-                        android:contentDescription="@string/icon_crop"/>
+                        android:contentDescription="@string/icon_crop"
+                        android:src="@android:drawable/ic_menu_crop" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/crop"/>
+                        android:text="@string/crop" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/tool_sketch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_edit"
-                        android:contentDescription="@string/icon_sketch"/>
+                        android:contentDescription="@string/icon_sketch"
+                        android:src="@android:drawable/ic_menu_edit" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sketch"/>
+                        android:text="@string/sketch" />
+
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/tool_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@android:drawable/ic_menu_add"
-                        android:contentDescription="@string/icon_text"/>
+                        android:contentDescription="@string/icon_text"
+                        android:src="@android:drawable/ic_menu_add" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/add_text"/>
+                        android:text="@string/add_text" />
+
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tool_neuro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:contentDescription="@string/icon_text"
+                        android:src="@android:drawable/ic_menu_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_text" />
+
+                </LinearLayout>
+
+
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>

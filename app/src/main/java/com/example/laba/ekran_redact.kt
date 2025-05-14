@@ -1,10 +1,8 @@
 package com.example.laba
 
 // --- Imports ---
-import android.content.Context
 import android.content.Intent
 import android.graphics.*
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -13,15 +11,9 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.drawable.toBitmap // Although imported, this isn't used in the provided code snippet
 import java.io.File
 import java.io.FileOutputStream
-import java.io.OutputStream
 import okhttp3.* // Although imported, okhttp3 is not used in the provided code snippet
-import okhttp3.MediaType.Companion.toMediaType // Although imported, okhttp3 is not used in the provided code snippet
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.RequestBody.Companion.toRequestBody // Although imported, okhttp3 is not used in the provided code snippet
-import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 // Note: Data classes and enums (ImageOverlay, TextOverlay, EditingMode)
@@ -65,7 +57,7 @@ class ekran_redact : AppCompatActivity() {
         R.id.tool_noise_reduction to "noise_reduction",
         R.id.tool_exposure to "exposure",
         R.id.tool_saturation to "saturation",
-        R.id.tool_warmth to "warmth"
+        R.id.tool_warmth to "warmth",
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -92,6 +84,7 @@ class ekran_redact : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.tool_crop).setOnClickListener { enterEditingMode(EditingMode.CROP) }
         findViewById<LinearLayout>(R.id.tool_sketch).setOnClickListener { enterEditingMode(EditingMode.DRAWING) }
         findViewById<LinearLayout>(R.id.tool_text).setOnClickListener { showTextInputDialog() }
+        findViewById<LinearLayout>(R.id.tool_neuro).setOnClickListener { neuronActivation(imageEditorView) }
 
         // Slider Listener
         slider.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -132,58 +125,57 @@ class ekran_redact : AppCompatActivity() {
         updateUIVisibility(EditingMode.NONE) // Call the helper to set initial visibility
     }
 
-    private fun neuronActivation(iv: ImageView) {
-        val apiKey = "2f38dc4bc02341adaba300f1771fb19d" // Замените на реальный ключ от Cutout.pro
+    private fun neuronActivation(iv: ImageEditorView) {
+        // API ключ (замените на ваш реальный ключ)
+        val apiKey = "sk-LiU5q1cZgI6NusPZwGvBGMUsYfJjlcetco2kJ1cZiz6uwuGX"
+        val prompt = "Make the image look like a cartoon"
 
-        // Получаем изображение из ImageView
-        val drawable = iv.drawable ?: run {
-            Toast.makeText(this@ekran_redact, "Сначала загрузите изображение", Toast.LENGTH_SHORT).show()
-            return
-        }
+        // Создаем тело запроса
+        val requestBody = MultipartBody.Builder()
+            .setType(MultipartBody.FORM)
+            .addFormDataPart("prompt", prompt) // Промпт для генерации изображения
+            .addFormDataPart("output_format", "jpeg") // Формат выходного изображения
+            .build()
 
-        try {
-            // Конвертируем Drawable в Bitmap
-            val bitmap = (drawable as BitmapDrawable).bitmap
+        // Создаем запрос
+        val request = Request.Builder()
+            .url("https://api.stability.ai/v2beta/stable-image/generate/sd3") // URL API
+            .header("Authorization", "Bearer $apiKey") // Авторизация
+            .header("Accept", "image/*") // Заголовок для принятия изображения
+            .post(requestBody)
+            .build()
 
-            // Конвертируем Bitmap в байтовый поток PNG
-            val outputStream = ByteArrayOutputStream()
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
-            val imageBytes = outputStream.toByteArray()
-
-            // Создаем тело запроса с изображением
-            val requestBody = MultipartBody.Builder()
-                .setType(MultipartBody.FORM)
-                .addFormDataPart(
-                    "file",
-                    "file.png",
-                    imageBytes.toRequestBody("image/png".toMediaTypeOrNull(), 0, imageBytes.size)
-                )
-                .build()
-
-            // Формируем запрос
-            val request = Request.Builder()
-                .url("https://www.cutout.pro/api/v1/cartoonSelfie?cartoonType=1")
-                .header("APIKEY", apiKey)
-                .post(requestBody)
-                .build()
-
-            // Выполняем асинхронный запрос
-            OkHttpClient().newCall(request).enqueue(object : Callback {
-                override fun onFailure(call: Call, e: IOException) {
+        // Выполняем запрос
+        val client = OkHttpClient()
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                // Обработка ошибки
+                runOnUiThread {
+                    Toast.makeText(this@ekran_redact, "Ошибка: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
+            }
 
-                override fun onResponse(call: Call, response: Response) {
-                    if (response.isSuccessful) {
-                        response.body?.bytes()?.let { bytes ->
-                            val resultBitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
-                            updateImageView(resultBitmap)
-                        }
-                    } else {
+            override fun onResponse(call: Call, response: Response) {
+                if (response.isSuccessful) {
+                    // Получаем байты изображения из ответа
+                    val imageBytes = response.body?.bytes()
+
+                    // Преобразуем байты в Bitmap
+                    val bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes?.size ?: 0)
+
+                    // Устанавливаем Bitmap в ImageView
+                    runOnUiThread {
+                        iv.setBitmap(bitmap)
+                        Toast.makeText(this@ekran_redact, "Изображение успешно загружено", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    // Обработка неуспешного ответа
+                    runOnUiThread {
+                        Toast.makeText(this@ekran_redact, "Ошибка: ${response.message}", Toast.LENGTH_SHORT).show()
                     }
                 }
-            })
-        } catch (e: Exception) {
-        }
+            }
+        })
     }
 
     // --- Setup Views Helper ---
@@ -191,7 +183,6 @@ class ekran_redact : AppCompatActivity() {
         imageEditorView = findViewById(R.id.imageEditorView)
         btnNazad = findViewById(R.id.btn_nazad)
         btnSave = findViewById(R.id.btn_save)
-        btnNeuron = findViewById(R.id.neuron)
         sliderContainer = findViewById(R.id.slider_container)
         slider = findViewById(R.id.slider)
 
