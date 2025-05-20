@@ -132,8 +132,8 @@ class ekran_redact : AppCompatActivity() {
         updateUIVisibility(EditingMode.NONE) // Call the helper to set initial visibility
     }
 
-    private fun neuronActivation(iv: ImageEditorView, urlka: String = "https://www.cutout.pro/api/v1/cartoonSelfie?cartoonType=8") {
-        val apiKey = "9c9fca0fd414434490dda991f4fac6a9" // Замените на реальный ключ от Cutout.pro
+    private fun neuronActivation(iv: ImageEditorView, urlka: String = "https://www.cutout.pro/api/v1/matting?mattingType=6") {
+        val apiKey = "4bfe2120f21e41b8a23f379a6034016d" // Замените на реальный ключ от Cutout.pro
 
         // Получаем изображение из ImageView
         val bitmap = iv.drawToBitmap()
