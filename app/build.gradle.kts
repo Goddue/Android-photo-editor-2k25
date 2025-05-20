@@ -14,6 +14,8 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
+        renderscriptTargetApi = 19
+        renderscriptSupportModeEnabled = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -58,6 +60,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation ("androidx.lifecycle:lifecycle-common:2.6.1")
     implementation ("com.google.android.gms:play-services-ads:22.6.0")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

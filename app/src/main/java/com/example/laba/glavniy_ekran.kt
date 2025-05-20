@@ -17,6 +17,7 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 class glavniy_ekran : AppCompatActivity() {
     lateinit var pereh_v_profil_button: ImageButton
     lateinit var cam_button: AppCompatButton

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <style name="SliderPanel">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -14,8 +14,43 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">Фильтр</item>
     </style>
+    <!-- Базовые стили текста -->
+    <style name="MontserratTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#1E1E1E</item>
+    </style>
 
+    <style name="MontserratTitleGlavniy" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FCD39F</item>
+    </style>
 
+    <style name="MontserratTextNiz" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#1E1E1E</item>
+    </style>
+
+    <style name="MontserratTextZoloto" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#F6A134</item>
+    </style>
+
+    <style name="MontserratTextZoloto2">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FCD39F</item>
+    </style>
+
+    <!-- Стили кнопок -->
     <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
         <item name="android:fontFamily">@font/montserrat_bold</item>
         <item name="android:background">@drawable/rounded_button</item>
@@ -25,6 +60,33 @@
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
         <item name="android:padding">8dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="CustomButtonGlavniyStyle" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:background">@drawable/rounded_button_glavniy</item>
+        <item name="android:minWidth">100dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#1E1E1E</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+    </style> CustomButtonGlavniyStyle
+
+    <style name="CustomButtonStyleOpacity" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:background">@drawable/round_button_opacity</item>
+        <item name="android:minWidth">220dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorHint">#80FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">left</item>
+        <item name="android:padding">14dp</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:textAllCaps">false</item>
     </style>
@@ -41,50 +103,4 @@
         <item name="android:stateListAnimator">@null</item>
         <item name="android:textAllCaps">false</item>
     </style>
-
-    <style name="CustomButtonStyleOpacity" parent="Widget.AppCompat.Button">
-        <item name="android:fontFamily">@font/montserrat_bold</item>
-        <item name="android:background">@drawable/round_button_opacity</item>
-        <item name="android:minWidth">220dp</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textColorHint">#80FFFFFF</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:gravity">left</item>
-        <item name="android:padding">14dp</item>
-        <item name="android:stateListAnimator">@null</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
-    <style name="MontserratTitle">
-        <item name="android:fontFamily">@font/montserrat_bold</item>
-        <item name="android:textSize">32sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#1E1E1E</item>
-    </style>
-
-    <style name="MontserratTextNiz">
-        <item name="android:fontFamily">@font/montserrat_bold</item>
-        <item name="android:textSize">11sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#1E1E1E</item>
-        <item name="android:textColor" tools:ignore="DuplicateDefinition">#B31E1E1E</item>
-    </style>
-
-    <style name="MontserratTextZoloto">
-        <item name="android:fontFamily">@font/montserrat_bold</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#F6A134</item>
-    </style>
-
-    <style name="MontserratTextZoloto2">
-        <item name="android:fontFamily">@font/montserrat_bold</item>
-        <item name="android:textSize">10sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#FCD39F</item>
-    </style>
-
 </resources>
-
-

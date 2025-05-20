@@ -5,13 +5,22 @@
     android:id="@+id/camera_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".glavniy_ekran"
-    android:background="@drawable/fon2">
+    tools:context=".glavniy_ekran">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fon2"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/pereh_v_profil_button"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:padding="6dp"
         android:background="@drawable/round_button"
         android:src="@drawable/iconka"
         android:contentDescription="@string/profile"
@@ -21,7 +30,21 @@
         app:layout_constraintHorizontal_bias="0.959"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.009" />
+        app:layout_constraintVertical_bias="0.015" />
+
+    <TextView
+        android:id="@+id/glavniy_eckran_label"
+        style="@style/MontserratTitleGlavniy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Magic Photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/vhod_label"
