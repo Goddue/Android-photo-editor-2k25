@@ -132,8 +132,8 @@ class ekran_redact : AppCompatActivity() {
         updateUIVisibility(EditingMode.NONE) // Call the helper to set initial visibility
     }
 
-    private fun neuronActivation(iv: ImageEditorView, urlka: String = "https://www.cutout.pro/api/v1/matting?mattingType=6") {
-        val apiKey = "e9a4aaf5f1a84753bde2f3866290aec0" // Замените на реальный ключ от Cutout.pro
+    private fun neuronActivation(iv: ImageEditorView, urlka: String = "https://www.cutout.pro/api/v1/cartoonSelfie?cartoonType=8") {
+        val apiKey = "9c9fca0fd414434490dda991f4fac6a9" // Замените на реальный ключ от Cutout.pro
 
         // Получаем изображение из ImageView
         val bitmap = iv.drawToBitmap()
@@ -200,6 +200,7 @@ class ekran_redact : AppCompatActivity() {
     // Вспомогательные функции для работы с UI
     private fun updateImageView(bitmap: Bitmap) {
         runOnUiThread {
+            currentBitmap = bitmap
             findViewById<ImageEditorView>(R.id.imageEditorView).setBitmap(bitmap)
             Toast.makeText(this@ekran_redact, "Изображение обновлено", Toast.LENGTH_SHORT).show()
         }
