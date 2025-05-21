@@ -133,7 +133,7 @@ class ekran_redact : AppCompatActivity() {
     }
 
     private fun neuronActivation(iv: ImageEditorView, urlka: String = "https://www.cutout.pro/api/v1/matting?mattingType=6") {
-        val apiKey = "4bfe2120f21e41b8a23f379a6034016d" // Замените на реальный ключ от Cutout.pro
+        val apiKey = "9540168e11f34f61bf8e8212b3b4b1dc" // Замените на реальный ключ от Cutout.pro
 
         // Получаем изображение из ImageView
         val bitmap = iv.drawToBitmap()
